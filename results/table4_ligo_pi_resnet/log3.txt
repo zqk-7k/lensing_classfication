@@ -1,0 +1,65 @@
+nohup: ignoring input
+
+============================================================
+ Target Task: [SIS] with [pure] data
+ Output Dir : ./runs/classifier_SIS_pure_v1/Baseline
+ Snake: False | SE: True | Fusion: True
+============================================================
+Loading data...
+[Data] Mapping /root/autodl-tmp/wjx_project/classcify-gw-lensing-pairs-main/ET_vs_LIGO/LIGO_data/SIS_data/SIS_h_strain_1.npy ...
+[Data] Mapping /root/autodl-tmp/wjx_project/classcify-gw-lensing-pairs-main/ET_vs_LIGO/LIGO_data/SIS_data/SIS_h_strain_2.npy ...
+[Data] Mapping /root/autodl-tmp/wjx_project/classcify-gw-lensing-pairs-main/ET_vs_LIGO/LIGO_data/Unlensed_data/unlensed_h_strain.npy ...
+ [Auto-Detect] 数据真实总通道数: 4
+ [Auto-Detect] 模型自适应输入通道: 2
+Ep   1: Tr_Loss=0.7342 Acc=0.6646 | Va_Loss=0.2881 Acc=0.8775 AUC=0.9670
+Ep   2: Tr_Loss=0.3381 Acc=0.8496 | Va_Loss=0.1698 Acc=0.9353 AUC=0.9866
+Ep   3: Tr_Loss=0.2411 Acc=0.8988 | Va_Loss=0.1176 Acc=0.9520 AUC=0.9927
+Ep   4: Tr_Loss=0.2004 Acc=0.9128 | Va_Loss=0.1102 Acc=0.9603 AUC=0.9940
+Ep   5: Tr_Loss=0.1695 Acc=0.9294 | Va_Loss=0.0806 Acc=0.9702 AUC=0.9960
+Ep   6: Tr_Loss=0.1494 Acc=0.9386 | Va_Loss=0.0719 Acc=0.9745 AUC=0.9970
+Ep   7: Tr_Loss=0.1312 Acc=0.9464 | Va_Loss=0.0730 Acc=0.9735 AUC=0.9974
+Ep   8: Tr_Loss=0.1173 Acc=0.9549 | Va_Loss=0.0581 Acc=0.9772 AUC=0.9980
+Ep   9: Tr_Loss=0.1021 Acc=0.9606 | Va_Loss=0.0582 Acc=0.9788 AUC=0.9981
+Ep  10: Tr_Loss=0.0942 Acc=0.9657 | Va_Loss=0.0615 Acc=0.9792 AUC=0.9976
+Ep  11: Tr_Loss=0.0833 Acc=0.9704 | Va_Loss=0.0639 Acc=0.9792 AUC=0.9985
+Ep  12: Tr_Loss=0.0740 Acc=0.9736 | Va_Loss=0.0639 Acc=0.9805 AUC=0.9984
+Ep  13: Tr_Loss=0.0689 Acc=0.9756 | Va_Loss=0.0483 Acc=0.9848 AUC=0.9989
+Ep  14: Tr_Loss=0.0620 Acc=0.9796 | Va_Loss=0.0389 Acc=0.9858 AUC=0.9991
+Ep  15: Tr_Loss=0.0607 Acc=0.9790 | Va_Loss=0.0401 Acc=0.9862 AUC=0.9992
+Ep  16: Tr_Loss=0.0537 Acc=0.9825 | Va_Loss=0.0336 Acc=0.9898 AUC=0.9993
+Ep  17: Tr_Loss=0.0456 Acc=0.9844 | Va_Loss=0.0340 Acc=0.9885 AUC=0.9994
+Ep  18: Tr_Loss=0.0406 Acc=0.9861 | Va_Loss=0.0361 Acc=0.9870 AUC=0.9994
+Ep  19: Tr_Loss=0.0438 Acc=0.9854 | Va_Loss=0.0397 Acc=0.9858 AUC=0.9993
+Ep  20: Tr_Loss=0.0380 Acc=0.9869 | Va_Loss=0.0386 Acc=0.9888 AUC=0.9995
+Ep  21: Tr_Loss=0.0381 Acc=0.9867 | Va_Loss=0.0311 Acc=0.9890 AUC=0.9995
+Ep  22: Tr_Loss=0.0349 Acc=0.9889 | Va_Loss=0.0309 Acc=0.9890 AUC=0.9996
+Ep  23: Tr_Loss=0.0320 Acc=0.9898 | Va_Loss=0.0288 Acc=0.9892 AUC=0.9996
+Ep  24: Tr_Loss=0.0354 Acc=0.9888 | Va_Loss=0.0310 Acc=0.9908 AUC=0.9996
+Ep  25: Tr_Loss=0.0325 Acc=0.9892 | Va_Loss=0.0280 Acc=0.9898 AUC=0.9996
+Ep  26: Tr_Loss=0.0273 Acc=0.9917 | Va_Loss=0.0278 Acc=0.9912 AUC=0.9996
+Ep  27: Tr_Loss=0.0265 Acc=0.9917 | Va_Loss=0.0313 Acc=0.9922 AUC=0.9997
+Ep  28: Tr_Loss=0.0224 Acc=0.9927 | Va_Loss=0.0251 Acc=0.9920 AUC=0.9998
+Ep  29: Tr_Loss=0.0262 Acc=0.9914 | Va_Loss=0.0242 Acc=0.9920 AUC=0.9997
+Ep  30: Tr_Loss=0.0221 Acc=0.9928 | Va_Loss=0.0307 Acc=0.9902 AUC=0.9997
+Ep  31: Tr_Loss=0.0206 Acc=0.9939 | Va_Loss=0.0373 Acc=0.9898 AUC=0.9997
+Ep  32: Tr_Loss=0.0184 Acc=0.9946 | Va_Loss=0.0281 Acc=0.9930 AUC=0.9997
+Ep  33: Tr_Loss=0.0175 Acc=0.9953 | Va_Loss=0.0307 Acc=0.9930 AUC=0.9997
+Ep  34: Tr_Loss=0.0199 Acc=0.9949 | Va_Loss=0.0282 Acc=0.9925 AUC=0.9997
+Ep  35: Tr_Loss=0.0173 Acc=0.9943 | Va_Loss=0.0314 Acc=0.9922 AUC=0.9998
+Ep  36: Tr_Loss=0.0160 Acc=0.9948 | Va_Loss=0.0306 Acc=0.9912 AUC=0.9998
+Ep  37: Tr_Loss=0.0155 Acc=0.9949 | Va_Loss=0.0324 Acc=0.9925 AUC=0.9997
+Ep  38: Tr_Loss=0.0127 Acc=0.9964 | Va_Loss=0.0294 Acc=0.9942 AUC=0.9998
+Ep  39: Tr_Loss=0.0153 Acc=0.9956 | Va_Loss=0.0313 Acc=0.9928 AUC=0.9998
+Ep  40: Tr_Loss=0.0131 Acc=0.9958 | Va_Loss=0.0355 Acc=0.9908 AUC=0.9998
+Ep  41: Tr_Loss=0.0095 Acc=0.9972 | Va_Loss=0.0319 Acc=0.9938 AUC=0.9998
+Ep  42: Tr_Loss=0.0098 Acc=0.9969 | Va_Loss=0.0291 Acc=0.9942 AUC=0.9998
+Ep  43: Tr_Loss=0.0152 Acc=0.9956 | Va_Loss=0.0309 Acc=0.9928 AUC=0.9998
+Ep  44: Tr_Loss=0.0127 Acc=0.9968 | Va_Loss=0.0270 Acc=0.9940 AUC=0.9999
+Ep  45: Tr_Loss=0.0098 Acc=0.9971 | Va_Loss=0.0306 Acc=0.9932 AUC=0.9999
+Ep  46: Tr_Loss=0.0113 Acc=0.9972 | Va_Loss=0.0323 Acc=0.9932 AUC=0.9998
+Ep  47: Tr_Loss=0.0107 Acc=0.9963 | Va_Loss=0.0359 Acc=0.9920 AUC=0.9998
+Ep  48: Tr_Loss=0.0082 Acc=0.9978 | Va_Loss=0.0325 Acc=0.9935 AUC=0.9998
+Ep  49: Tr_Loss=0.0146 Acc=0.9962 | Va_Loss=0.0360 Acc=0.9930 AUC=0.9998
+Ep  50: Tr_Loss=0.0087 Acc=0.9978 | Va_Loss=0.0315 Acc=0.9932 AUC=0.9998
+
+? Done! Best Acc: 99.42%. Saved to ./runs/classifier_SIS_pure_v1/Baseline

@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
+
+# Large generated data and model artifacts
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.pt
+*.pth
+checkpoints/
+runs/
+dataset_images_*/
+
+# Local experiment output
+outputs/
+wandb/
+tmp/

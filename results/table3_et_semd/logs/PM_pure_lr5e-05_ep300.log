@@ -1,0 +1,941 @@
+============================================================
+🚀 Auto-generated model name: PM_pure_cqt_model
+============================================================
+Using device: cuda
+Epoch 1/300
+  Train loss: 0.7222, acc: 0.5080
+  Val   loss: 0.6531, acc: 0.6528, AUC: 0.8928
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 2/300
+  Train loss: 0.5542, acc: 0.7421
+  Val   loss: 0.3339, acc: 0.9088, AUC: 0.9821
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 3/300
+  Train loss: 0.4126, acc: 0.8739
+  Val   loss: 0.4402, acc: 0.8656, AUC: 0.9848
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 4/300
+  Train loss: 0.3978, acc: 0.8765
+  Val   loss: 0.3590, acc: 0.8960, AUC: 0.9853
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 5/300
+  Train loss: 0.3608, acc: 0.9075
+  Val   loss: 0.2632, acc: 0.9648, AUC: 0.9931
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 6/300
+  Train loss: 0.3432, acc: 0.9200
+  Val   loss: 0.2743, acc: 0.9584, AUC: 0.9915
+Epoch 7/300
+  Train loss: 0.3431, acc: 0.9160
+  Val   loss: 0.2475, acc: 0.9712, AUC: 0.9965
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 8/300
+  Train loss: 0.3271, acc: 0.9283
+  Val   loss: 0.2613, acc: 0.9712, AUC: 0.9964
+Epoch 9/300
+  Train loss: 0.3141, acc: 0.9320
+  Val   loss: 0.3285, acc: 0.9168, AUC: 0.9933
+Epoch 10/300
+  Train loss: 0.3204, acc: 0.9291
+  Val   loss: 0.2709, acc: 0.9600, AUC: 0.9963
+Epoch 11/300
+  Train loss: 0.3175, acc: 0.9341
+  Val   loss: 0.2572, acc: 0.9632, AUC: 0.9966
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 12/300
+  Train loss: 0.3084, acc: 0.9395
+  Val   loss: 0.2413, acc: 0.9744, AUC: 0.9970
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 13/300
+  Train loss: 0.2963, acc: 0.9467
+  Val   loss: 0.2478, acc: 0.9680, AUC: 0.9973
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 14/300
+  Train loss: 0.2971, acc: 0.9480
+  Val   loss: 0.2519, acc: 0.9616, AUC: 0.9976
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 15/300
+  Train loss: 0.2909, acc: 0.9477
+  Val   loss: 0.2439, acc: 0.9760, AUC: 0.9985
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 16/300
+  Train loss: 0.2942, acc: 0.9459
+  Val   loss: 0.2355, acc: 0.9808, AUC: 0.9981
+Epoch 17/300
+  Train loss: 0.2841, acc: 0.9523
+  Val   loss: 0.2314, acc: 0.9760, AUC: 0.9987
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 18/300
+  Train loss: 0.2840, acc: 0.9544
+  Val   loss: 0.2618, acc: 0.9600, AUC: 0.9978
+Epoch 19/300
+  Train loss: 0.2769, acc: 0.9579
+  Val   loss: 0.2776, acc: 0.9536, AUC: 0.9975
+Epoch 20/300
+  Train loss: 0.2836, acc: 0.9541
+  Val   loss: 0.2428, acc: 0.9760, AUC: 0.9989
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 21/300
+  Train loss: 0.2778, acc: 0.9584
+  Val   loss: 0.2282, acc: 0.9808, AUC: 0.9989
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 22/300
+  Train loss: 0.2711, acc: 0.9621
+  Val   loss: 0.2402, acc: 0.9824, AUC: 0.9980
+Epoch 23/300
+  Train loss: 0.2748, acc: 0.9608
+  Val   loss: 0.2296, acc: 0.9824, AUC: 0.9988
+Epoch 24/300
+  Train loss: 0.2701, acc: 0.9651
+  Val   loss: 0.2457, acc: 0.9744, AUC: 0.9981
+Epoch 25/300
+  Train loss: 0.2816, acc: 0.9552
+  Val   loss: 0.2404, acc: 0.9744, AUC: 0.9983
+Epoch 26/300
+  Train loss: 0.2694, acc: 0.9621
+  Val   loss: 0.2483, acc: 0.9728, AUC: 0.9987
+Epoch 27/300
+  Train loss: 0.2701, acc: 0.9616
+  Val   loss: 0.2356, acc: 0.9792, AUC: 0.9982
+Epoch 28/300
+  Train loss: 0.2766, acc: 0.9595
+  Val   loss: 0.2377, acc: 0.9728, AUC: 0.9985
+Epoch 29/300
+  Train loss: 0.2678, acc: 0.9667
+  Val   loss: 0.2633, acc: 0.9664, AUC: 0.9975
+Epoch 30/300
+  Train loss: 0.2651, acc: 0.9648
+  Val   loss: 0.2285, acc: 0.9872, AUC: 0.9992
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 31/300
+  Train loss: 0.2608, acc: 0.9685
+  Val   loss: 0.2229, acc: 0.9840, AUC: 0.9992
+Epoch 32/300
+  Train loss: 0.2673, acc: 0.9669
+  Val   loss: 0.2395, acc: 0.9792, AUC: 0.9981
+Epoch 33/300
+  Train loss: 0.2629, acc: 0.9675
+  Val   loss: 0.2213, acc: 0.9856, AUC: 0.9994
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 34/300
+  Train loss: 0.2568, acc: 0.9717
+  Val   loss: 0.2337, acc: 0.9840, AUC: 0.9985
+Epoch 35/300
+  Train loss: 0.2656, acc: 0.9656
+  Val   loss: 0.2319, acc: 0.9808, AUC: 0.9986
+Epoch 36/300
+  Train loss: 0.2555, acc: 0.9712
+  Val   loss: 0.2322, acc: 0.9824, AUC: 0.9988
+Epoch 37/300
+  Train loss: 0.2671, acc: 0.9651
+  Val   loss: 0.2229, acc: 0.9872, AUC: 0.9989
+Epoch 38/300
+  Train loss: 0.2519, acc: 0.9720
+  Val   loss: 0.2322, acc: 0.9808, AUC: 0.9989
+Epoch 39/300
+  Train loss: 0.2606, acc: 0.9691
+  Val   loss: 0.2198, acc: 0.9888, AUC: 0.9993
+Epoch 40/300
+  Train loss: 0.2521, acc: 0.9744
+  Val   loss: 0.2262, acc: 0.9840, AUC: 0.9992
+Epoch 41/300
+  Train loss: 0.2514, acc: 0.9736
+  Val   loss: 0.2374, acc: 0.9776, AUC: 0.9992
+Epoch 42/300
+  Train loss: 0.2548, acc: 0.9701
+  Val   loss: 0.2346, acc: 0.9808, AUC: 0.9989
+Epoch 43/300
+  Train loss: 0.2485, acc: 0.9749
+  Val   loss: 0.2331, acc: 0.9808, AUC: 0.9987
+Epoch 44/300
+  Train loss: 0.2554, acc: 0.9709
+  Val   loss: 0.2534, acc: 0.9744, AUC: 0.9982
+Epoch 45/300
+  Train loss: 0.2539, acc: 0.9733
+  Val   loss: 0.2323, acc: 0.9808, AUC: 0.9992
+Epoch 46/300
+  Train loss: 0.2494, acc: 0.9747
+  Val   loss: 0.2253, acc: 0.9888, AUC: 0.9989
+Epoch 47/300
+  Train loss: 0.2484, acc: 0.9752
+  Val   loss: 0.2311, acc: 0.9840, AUC: 0.9986
+Epoch 48/300
+  Train loss: 0.2517, acc: 0.9733
+  Val   loss: 0.2281, acc: 0.9808, AUC: 0.9992
+Epoch 49/300
+  Train loss: 0.2488, acc: 0.9757
+  Val   loss: 0.2244, acc: 0.9856, AUC: 0.9990
+Epoch 50/300
+  Train loss: 0.2393, acc: 0.9811
+  Val   loss: 0.2379, acc: 0.9760, AUC: 0.9983
+Epoch 51/300
+  Train loss: 0.2522, acc: 0.9741
+  Val   loss: 0.2247, acc: 0.9840, AUC: 0.9992
+Epoch 52/300
+  Train loss: 0.2469, acc: 0.9803
+  Val   loss: 0.2544, acc: 0.9728, AUC: 0.9990
+Epoch 53/300
+  Train loss: 0.2427, acc: 0.9776
+  Val   loss: 0.2214, acc: 0.9936, AUC: 0.9993
+Epoch 54/300
+  Train loss: 0.2477, acc: 0.9784
+  Val   loss: 0.2279, acc: 0.9776, AUC: 0.9996
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 55/300
+  Train loss: 0.2431, acc: 0.9768
+  Val   loss: 0.2144, acc: 0.9920, AUC: 0.9996
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 56/300
+  Train loss: 0.2475, acc: 0.9757
+  Val   loss: 0.2221, acc: 0.9872, AUC: 0.9995
+Epoch 57/300
+  Train loss: 0.2405, acc: 0.9800
+  Val   loss: 0.2197, acc: 0.9888, AUC: 0.9995
+Epoch 58/300
+  Train loss: 0.2462, acc: 0.9755
+  Val   loss: 0.2271, acc: 0.9776, AUC: 0.9990
+Epoch 59/300
+  Train loss: 0.2450, acc: 0.9797
+  Val   loss: 0.2271, acc: 0.9808, AUC: 0.9992
+Epoch 60/300
+  Train loss: 0.2387, acc: 0.9824
+  Val   loss: 0.2216, acc: 0.9888, AUC: 0.9992
+Epoch 61/300
+  Train loss: 0.2441, acc: 0.9805
+  Val   loss: 0.2378, acc: 0.9792, AUC: 0.9982
+Epoch 62/300
+  Train loss: 0.2477, acc: 0.9768
+  Val   loss: 0.2477, acc: 0.9760, AUC: 0.9983
+Epoch 63/300
+  Train loss: 0.2424, acc: 0.9811
+  Val   loss: 0.2217, acc: 0.9936, AUC: 0.9992
+Epoch 64/300
+  Train loss: 0.2437, acc: 0.9797
+  Val   loss: 0.2519, acc: 0.9680, AUC: 0.9994
+Epoch 65/300
+  Train loss: 0.2479, acc: 0.9760
+  Val   loss: 0.2275, acc: 0.9824, AUC: 0.9993
+Epoch 66/300
+  Train loss: 0.2421, acc: 0.9797
+  Val   loss: 0.2250, acc: 0.9856, AUC: 0.9991
+Epoch 67/300
+  Train loss: 0.2431, acc: 0.9787
+  Val   loss: 0.2391, acc: 0.9744, AUC: 0.9984
+Epoch 68/300
+  Train loss: 0.2390, acc: 0.9808
+  Val   loss: 0.2327, acc: 0.9792, AUC: 0.9995
+Epoch 69/300
+  Train loss: 0.2356, acc: 0.9819
+  Val   loss: 0.2214, acc: 0.9888, AUC: 0.9993
+Epoch 70/300
+  Train loss: 0.2301, acc: 0.9869
+  Val   loss: 0.2218, acc: 0.9856, AUC: 0.9997
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 71/300
+  Train loss: 0.2391, acc: 0.9808
+  Val   loss: 0.2286, acc: 0.9808, AUC: 0.9997
+Epoch 72/300
+  Train loss: 0.2390, acc: 0.9808
+  Val   loss: 0.2191, acc: 0.9904, AUC: 0.9995
+Epoch 73/300
+  Train loss: 0.2345, acc: 0.9829
+  Val   loss: 0.2257, acc: 0.9856, AUC: 0.9991
+Epoch 74/300
+  Train loss: 0.2329, acc: 0.9819
+  Val   loss: 0.2200, acc: 0.9872, AUC: 0.9994
+Epoch 75/300
+  Train loss: 0.2304, acc: 0.9867
+  Val   loss: 0.2175, acc: 0.9872, AUC: 0.9997
+Epoch 76/300
+  Train loss: 0.2416, acc: 0.9816
+  Val   loss: 0.2211, acc: 0.9904, AUC: 0.9995
+Epoch 77/300
+  Train loss: 0.2262, acc: 0.9893
+  Val   loss: 0.2217, acc: 0.9888, AUC: 0.9996
+Epoch 78/300
+  Train loss: 0.2359, acc: 0.9808
+  Val   loss: 0.2196, acc: 0.9888, AUC: 0.9992
+Epoch 79/300
+  Train loss: 0.2330, acc: 0.9832
+  Val   loss: 0.2186, acc: 0.9920, AUC: 0.9993
+Epoch 80/300
+  Train loss: 0.2373, acc: 0.9816
+  Val   loss: 0.2202, acc: 0.9904, AUC: 0.9995
+Epoch 81/300
+  Train loss: 0.2316, acc: 0.9848
+  Val   loss: 0.2152, acc: 0.9904, AUC: 0.9995
+Epoch 82/300
+  Train loss: 0.2377, acc: 0.9837
+  Val   loss: 0.2261, acc: 0.9808, AUC: 0.9993
+Epoch 83/300
+  Train loss: 0.2327, acc: 0.9829
+  Val   loss: 0.2207, acc: 0.9856, AUC: 0.9996
+Epoch 84/300
+  Train loss: 0.2354, acc: 0.9829
+  Val   loss: 0.2261, acc: 0.9824, AUC: 0.9994
+Epoch 85/300
+  Train loss: 0.2316, acc: 0.9888
+  Val   loss: 0.2225, acc: 0.9856, AUC: 0.9997
+Epoch 86/300
+  Train loss: 0.2336, acc: 0.9840
+  Val   loss: 0.2214, acc: 0.9840, AUC: 0.9992
+Epoch 87/300
+  Train loss: 0.2351, acc: 0.9837
+  Val   loss: 0.2279, acc: 0.9824, AUC: 0.9992
+Epoch 88/300
+  Train loss: 0.2298, acc: 0.9867
+  Val   loss: 0.2337, acc: 0.9776, AUC: 0.9993
+Epoch 89/300
+  Train loss: 0.2334, acc: 0.9816
+  Val   loss: 0.2267, acc: 0.9840, AUC: 0.9992
+Epoch 90/300
+  Train loss: 0.2305, acc: 0.9859
+  Val   loss: 0.2268, acc: 0.9856, AUC: 0.9989
+Epoch 91/300
+  Train loss: 0.2362, acc: 0.9832
+  Val   loss: 0.2302, acc: 0.9808, AUC: 0.9990
+Epoch 92/300
+  Train loss: 0.2358, acc: 0.9829
+  Val   loss: 0.2187, acc: 0.9904, AUC: 0.9995
+Epoch 93/300
+  Train loss: 0.2250, acc: 0.9891
+  Val   loss: 0.2134, acc: 0.9920, AUC: 0.9997
+Epoch 94/300
+  Train loss: 0.2318, acc: 0.9845
+  Val   loss: 0.2290, acc: 0.9856, AUC: 0.9991
+Epoch 95/300
+  Train loss: 0.2332, acc: 0.9856
+  Val   loss: 0.2186, acc: 0.9872, AUC: 0.9995
+Epoch 96/300
+  Train loss: 0.2289, acc: 0.9869
+  Val   loss: 0.2150, acc: 0.9920, AUC: 0.9998
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 97/300
+  Train loss: 0.2259, acc: 0.9877
+  Val   loss: 0.2174, acc: 0.9904, AUC: 0.9997
+Epoch 98/300
+  Train loss: 0.2373, acc: 0.9821
+  Val   loss: 0.2255, acc: 0.9824, AUC: 0.9994
+Epoch 99/300
+  Train loss: 0.2236, acc: 0.9893
+  Val   loss: 0.2307, acc: 0.9856, AUC: 0.9992
+Epoch 100/300
+  Train loss: 0.2284, acc: 0.9867
+  Val   loss: 0.2281, acc: 0.9824, AUC: 0.9993
+Epoch 101/300
+  Train loss: 0.2328, acc: 0.9848
+  Val   loss: 0.2371, acc: 0.9808, AUC: 0.9988
+Epoch 102/300
+  Train loss: 0.2289, acc: 0.9872
+  Val   loss: 0.2194, acc: 0.9872, AUC: 0.9997
+Epoch 103/300
+  Train loss: 0.2424, acc: 0.9797
+  Val   loss: 0.2235, acc: 0.9888, AUC: 0.9992
+Epoch 104/300
+  Train loss: 0.2284, acc: 0.9875
+  Val   loss: 0.2538, acc: 0.9664, AUC: 0.9995
+Epoch 105/300
+  Train loss: 0.2278, acc: 0.9875
+  Val   loss: 0.2153, acc: 0.9888, AUC: 0.9998
+Epoch 106/300
+  Train loss: 0.2325, acc: 0.9851
+  Val   loss: 0.2205, acc: 0.9904, AUC: 0.9995
+Epoch 107/300
+  Train loss: 0.2319, acc: 0.9872
+  Val   loss: 0.2209, acc: 0.9856, AUC: 0.9991
+Epoch 108/300
+  Train loss: 0.2355, acc: 0.9848
+  Val   loss: 0.2182, acc: 0.9872, AUC: 0.9996
+Epoch 109/300
+  Train loss: 0.2245, acc: 0.9893
+  Val   loss: 0.2229, acc: 0.9872, AUC: 0.9993
+Epoch 110/300
+  Train loss: 0.2258, acc: 0.9891
+  Val   loss: 0.2160, acc: 0.9904, AUC: 0.9995
+Epoch 111/300
+  Train loss: 0.2303, acc: 0.9867
+  Val   loss: 0.2116, acc: 0.9920, AUC: 0.9998
+Epoch 112/300
+  Train loss: 0.2279, acc: 0.9875
+  Val   loss: 0.2173, acc: 0.9904, AUC: 0.9998
+Epoch 113/300
+  Train loss: 0.2332, acc: 0.9859
+  Val   loss: 0.2181, acc: 0.9856, AUC: 0.9995
+Epoch 114/300
+  Train loss: 0.2225, acc: 0.9901
+  Val   loss: 0.2120, acc: 0.9936, AUC: 0.9998
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 115/300
+  Train loss: 0.2287, acc: 0.9875
+  Val   loss: 0.2298, acc: 0.9840, AUC: 0.9989
+Epoch 116/300
+  Train loss: 0.2291, acc: 0.9867
+  Val   loss: 0.2144, acc: 0.9904, AUC: 0.9995
+Epoch 117/300
+  Train loss: 0.2294, acc: 0.9885
+  Val   loss: 0.2186, acc: 0.9904, AUC: 0.9995
+Epoch 118/300
+  Train loss: 0.2283, acc: 0.9877
+  Val   loss: 0.2351, acc: 0.9792, AUC: 0.9994
+Epoch 119/300
+  Train loss: 0.2312, acc: 0.9856
+  Val   loss: 0.2230, acc: 0.9856, AUC: 0.9996
+Epoch 120/300
+  Train loss: 0.2354, acc: 0.9829
+  Val   loss: 0.2210, acc: 0.9856, AUC: 0.9996
+Epoch 121/300
+  Train loss: 0.2273, acc: 0.9901
+  Val   loss: 0.2167, acc: 0.9904, AUC: 0.9997
+Epoch 122/300
+  Train loss: 0.2305, acc: 0.9835
+  Val   loss: 0.2220, acc: 0.9872, AUC: 0.9995
+Epoch 123/300
+  Train loss: 0.2221, acc: 0.9904
+  Val   loss: 0.2244, acc: 0.9856, AUC: 0.9996
+Epoch 124/300
+  Train loss: 0.2284, acc: 0.9859
+  Val   loss: 0.2149, acc: 0.9920, AUC: 0.9997
+Epoch 125/300
+  Train loss: 0.2228, acc: 0.9893
+  Val   loss: 0.2237, acc: 0.9856, AUC: 0.9995
+Epoch 126/300
+  Train loss: 0.2316, acc: 0.9867
+  Val   loss: 0.2142, acc: 0.9936, AUC: 0.9996
+Epoch 127/300
+  Train loss: 0.2234, acc: 0.9893
+  Val   loss: 0.2167, acc: 0.9872, AUC: 0.9997
+Epoch 128/300
+  Train loss: 0.2318, acc: 0.9840
+  Val   loss: 0.2197, acc: 0.9904, AUC: 0.9997
+Epoch 129/300
+  Train loss: 0.2221, acc: 0.9909
+  Val   loss: 0.2195, acc: 0.9872, AUC: 0.9995
+Epoch 130/300
+  Train loss: 0.2366, acc: 0.9832
+  Val   loss: 0.2226, acc: 0.9888, AUC: 0.9988
+Epoch 131/300
+  Train loss: 0.2257, acc: 0.9891
+  Val   loss: 0.2269, acc: 0.9872, AUC: 0.9987
+Epoch 132/300
+  Train loss: 0.2298, acc: 0.9864
+  Val   loss: 0.2268, acc: 0.9856, AUC: 0.9997
+Epoch 133/300
+  Train loss: 0.2245, acc: 0.9893
+  Val   loss: 0.2179, acc: 0.9904, AUC: 0.9991
+Epoch 134/300
+  Train loss: 0.2239, acc: 0.9896
+  Val   loss: 0.2196, acc: 0.9888, AUC: 0.9995
+Epoch 135/300
+  Train loss: 0.2211, acc: 0.9920
+  Val   loss: 0.2327, acc: 0.9872, AUC: 0.9991
+Epoch 136/300
+  Train loss: 0.2294, acc: 0.9853
+  Val   loss: 0.2228, acc: 0.9872, AUC: 0.9991
+Epoch 137/300
+  Train loss: 0.2235, acc: 0.9899
+  Val   loss: 0.2254, acc: 0.9840, AUC: 0.9997
+Epoch 138/300
+  Train loss: 0.2244, acc: 0.9904
+  Val   loss: 0.2191, acc: 0.9888, AUC: 0.9996
+Epoch 139/300
+  Train loss: 0.2247, acc: 0.9891
+  Val   loss: 0.2307, acc: 0.9840, AUC: 0.9993
+Epoch 140/300
+  Train loss: 0.2237, acc: 0.9912
+  Val   loss: 0.2227, acc: 0.9872, AUC: 0.9995
+Epoch 141/300
+  Train loss: 0.2233, acc: 0.9896
+  Val   loss: 0.2247, acc: 0.9840, AUC: 0.9992
+Epoch 142/300
+  Train loss: 0.2248, acc: 0.9899
+  Val   loss: 0.2265, acc: 0.9872, AUC: 0.9994
+Epoch 143/300
+  Train loss: 0.2228, acc: 0.9920
+  Val   loss: 0.2283, acc: 0.9856, AUC: 0.9993
+Epoch 144/300
+  Train loss: 0.2229, acc: 0.9893
+  Val   loss: 0.2148, acc: 0.9904, AUC: 0.9998
+Epoch 145/300
+  Train loss: 0.2246, acc: 0.9893
+  Val   loss: 0.2258, acc: 0.9856, AUC: 0.9996
+Epoch 146/300
+  Train loss: 0.2225, acc: 0.9904
+  Val   loss: 0.2190, acc: 0.9888, AUC: 0.9993
+Epoch 147/300
+  Train loss: 0.2183, acc: 0.9947
+  Val   loss: 0.2311, acc: 0.9856, AUC: 0.9994
+Epoch 148/300
+  Train loss: 0.2240, acc: 0.9883
+  Val   loss: 0.2360, acc: 0.9808, AUC: 0.9991
+Epoch 149/300
+  Train loss: 0.2252, acc: 0.9872
+  Val   loss: 0.2293, acc: 0.9840, AUC: 0.9993
+Epoch 150/300
+  Train loss: 0.2235, acc: 0.9885
+  Val   loss: 0.2136, acc: 0.9920, AUC: 0.9985
+Epoch 151/300
+  Train loss: 0.2240, acc: 0.9893
+  Val   loss: 0.2144, acc: 0.9952, AUC: 0.9991
+Epoch 152/300
+  Train loss: 0.2224, acc: 0.9925
+  Val   loss: 0.2181, acc: 0.9888, AUC: 0.9995
+Epoch 153/300
+  Train loss: 0.2181, acc: 0.9912
+  Val   loss: 0.2250, acc: 0.9856, AUC: 0.9997
+Epoch 154/300
+  Train loss: 0.2233, acc: 0.9896
+  Val   loss: 0.2391, acc: 0.9808, AUC: 0.9992
+Epoch 155/300
+  Train loss: 0.2269, acc: 0.9885
+  Val   loss: 0.2268, acc: 0.9856, AUC: 0.9995
+Epoch 156/300
+  Train loss: 0.2192, acc: 0.9915
+  Val   loss: 0.2272, acc: 0.9856, AUC: 0.9995
+Epoch 157/300
+  Train loss: 0.2268, acc: 0.9893
+  Val   loss: 0.2193, acc: 0.9872, AUC: 0.9995
+Epoch 158/300
+  Train loss: 0.2215, acc: 0.9920
+  Val   loss: 0.2446, acc: 0.9792, AUC: 0.9991
+Epoch 159/300
+  Train loss: 0.2225, acc: 0.9899
+  Val   loss: 0.2158, acc: 0.9888, AUC: 0.9996
+Epoch 160/300
+  Train loss: 0.2259, acc: 0.9891
+  Val   loss: 0.2211, acc: 0.9872, AUC: 0.9995
+Epoch 161/300
+  Train loss: 0.2196, acc: 0.9904
+  Val   loss: 0.2179, acc: 0.9920, AUC: 0.9995
+Epoch 162/300
+  Train loss: 0.2198, acc: 0.9920
+  Val   loss: 0.2273, acc: 0.9872, AUC: 0.9992
+Epoch 163/300
+  Train loss: 0.2222, acc: 0.9891
+  Val   loss: 0.2327, acc: 0.9824, AUC: 0.9982
+Epoch 164/300
+  Train loss: 0.2223, acc: 0.9909
+  Val   loss: 0.2231, acc: 0.9888, AUC: 0.9965
+Epoch 165/300
+  Train loss: 0.2209, acc: 0.9901
+  Val   loss: 0.2219, acc: 0.9840, AUC: 0.9994
+Epoch 166/300
+  Train loss: 0.2241, acc: 0.9904
+  Val   loss: 0.2196, acc: 0.9888, AUC: 0.9995
+Epoch 167/300
+  Train loss: 0.2213, acc: 0.9923
+  Val   loss: 0.2227, acc: 0.9888, AUC: 0.9957
+Epoch 168/300
+  Train loss: 0.2236, acc: 0.9893
+  Val   loss: 0.2254, acc: 0.9840, AUC: 0.9994
+Epoch 169/300
+  Train loss: 0.2274, acc: 0.9880
+  Val   loss: 0.2184, acc: 0.9920, AUC: 0.9995
+Epoch 170/300
+  Train loss: 0.2177, acc: 0.9939
+  Val   loss: 0.2292, acc: 0.9840, AUC: 0.9985
+Epoch 171/300
+  Train loss: 0.2237, acc: 0.9917
+  Val   loss: 0.2134, acc: 0.9936, AUC: 0.9996
+Epoch 172/300
+  Train loss: 0.2183, acc: 0.9923
+  Val   loss: 0.2195, acc: 0.9888, AUC: 0.9996
+Epoch 173/300
+  Train loss: 0.2210, acc: 0.9904
+  Val   loss: 0.2206, acc: 0.9888, AUC: 0.9995
+Epoch 174/300
+  Train loss: 0.2235, acc: 0.9875
+  Val   loss: 0.2284, acc: 0.9840, AUC: 0.9987
+Epoch 175/300
+  Train loss: 0.2251, acc: 0.9885
+  Val   loss: 0.2293, acc: 0.9856, AUC: 0.9992
+Epoch 176/300
+  Train loss: 0.2225, acc: 0.9912
+  Val   loss: 0.2299, acc: 0.9824, AUC: 0.9992
+Epoch 177/300
+  Train loss: 0.2272, acc: 0.9883
+  Val   loss: 0.2227, acc: 0.9856, AUC: 0.9993
+Epoch 178/300
+  Train loss: 0.2179, acc: 0.9928
+  Val   loss: 0.2365, acc: 0.9808, AUC: 0.9986
+Epoch 179/300
+  Train loss: 0.2219, acc: 0.9912
+  Val   loss: 0.2292, acc: 0.9840, AUC: 0.9996
+Epoch 180/300
+  Train loss: 0.2243, acc: 0.9891
+  Val   loss: 0.2160, acc: 0.9936, AUC: 0.9992
+Epoch 181/300
+  Train loss: 0.2199, acc: 0.9915
+  Val   loss: 0.2293, acc: 0.9824, AUC: 0.9991
+Epoch 182/300
+  Train loss: 0.2192, acc: 0.9915
+  Val   loss: 0.2119, acc: 0.9920, AUC: 0.9998
+Epoch 183/300
+  Train loss: 0.2169, acc: 0.9931
+  Val   loss: 0.2210, acc: 0.9888, AUC: 0.9994
+Epoch 184/300
+  Train loss: 0.2228, acc: 0.9904
+  Val   loss: 0.2198, acc: 0.9904, AUC: 0.9995
+Epoch 185/300
+  Train loss: 0.2189, acc: 0.9912
+  Val   loss: 0.2201, acc: 0.9904, AUC: 0.9996
+Epoch 186/300
+  Train loss: 0.2231, acc: 0.9901
+  Val   loss: 0.2225, acc: 0.9888, AUC: 0.9994
+Epoch 187/300
+  Train loss: 0.2147, acc: 0.9949
+  Val   loss: 0.2221, acc: 0.9888, AUC: 0.9996
+Epoch 188/300
+  Train loss: 0.2192, acc: 0.9923
+  Val   loss: 0.2167, acc: 0.9904, AUC: 0.9996
+Epoch 189/300
+  Train loss: 0.2209, acc: 0.9912
+  Val   loss: 0.2203, acc: 0.9888, AUC: 0.9996
+Epoch 190/300
+  Train loss: 0.2196, acc: 0.9925
+  Val   loss: 0.2224, acc: 0.9856, AUC: 0.9990
+Epoch 191/300
+  Train loss: 0.2216, acc: 0.9901
+  Val   loss: 0.2182, acc: 0.9872, AUC: 0.9996
+Epoch 192/300
+  Train loss: 0.2221, acc: 0.9915
+  Val   loss: 0.2174, acc: 0.9888, AUC: 0.9997
+Epoch 193/300
+  Train loss: 0.2179, acc: 0.9925
+  Val   loss: 0.2296, acc: 0.9840, AUC: 0.9990
+Epoch 194/300
+  Train loss: 0.2231, acc: 0.9885
+  Val   loss: 0.2208, acc: 0.9872, AUC: 0.9997
+Epoch 195/300
+  Train loss: 0.2207, acc: 0.9909
+  Val   loss: 0.2220, acc: 0.9872, AUC: 0.9995
+Epoch 196/300
+  Train loss: 0.2176, acc: 0.9947
+  Val   loss: 0.2222, acc: 0.9888, AUC: 0.9993
+Epoch 197/300
+  Train loss: 0.2274, acc: 0.9875
+  Val   loss: 0.2221, acc: 0.9888, AUC: 0.9991
+Epoch 198/300
+  Train loss: 0.2209, acc: 0.9923
+  Val   loss: 0.2213, acc: 0.9840, AUC: 0.9995
+Epoch 199/300
+  Train loss: 0.2149, acc: 0.9952
+  Val   loss: 0.2397, acc: 0.9792, AUC: 0.9993
+Epoch 200/300
+  Train loss: 0.2240, acc: 0.9907
+  Val   loss: 0.2263, acc: 0.9840, AUC: 0.9994
+Epoch 201/300
+  Train loss: 0.2232, acc: 0.9912
+  Val   loss: 0.2288, acc: 0.9824, AUC: 0.9994
+Epoch 202/300
+  Train loss: 0.2163, acc: 0.9923
+  Val   loss: 0.2113, acc: 0.9904, AUC: 0.9998
+Epoch 203/300
+  Train loss: 0.2245, acc: 0.9891
+  Val   loss: 0.2236, acc: 0.9872, AUC: 0.9994
+Epoch 204/300
+  Train loss: 0.2189, acc: 0.9923
+  Val   loss: 0.2210, acc: 0.9872, AUC: 0.9994
+Epoch 205/300
+  Train loss: 0.2203, acc: 0.9917
+  Val   loss: 0.2173, acc: 0.9920, AUC: 0.9997
+Epoch 206/300
+  Train loss: 0.2167, acc: 0.9936
+  Val   loss: 0.2260, acc: 0.9856, AUC: 0.9993
+Epoch 207/300
+  Train loss: 0.2220, acc: 0.9904
+  Val   loss: 0.2170, acc: 0.9872, AUC: 0.9994
+Epoch 208/300
+  Train loss: 0.2173, acc: 0.9925
+  Val   loss: 0.2187, acc: 0.9840, AUC: 0.9996
+Epoch 209/300
+  Train loss: 0.2164, acc: 0.9952
+  Val   loss: 0.2171, acc: 0.9904, AUC: 0.9997
+Epoch 210/300
+  Train loss: 0.2190, acc: 0.9904
+  Val   loss: 0.2269, acc: 0.9840, AUC: 0.9991
+Epoch 211/300
+  Train loss: 0.2277, acc: 0.9856
+  Val   loss: 0.2185, acc: 0.9888, AUC: 0.9997
+Epoch 212/300
+  Train loss: 0.2174, acc: 0.9920
+  Val   loss: 0.2179, acc: 0.9904, AUC: 0.9997
+Epoch 213/300
+  Train loss: 0.2162, acc: 0.9941
+  Val   loss: 0.2393, acc: 0.9840, AUC: 0.9998
+Epoch 214/300
+  Train loss: 0.2210, acc: 0.9915
+  Val   loss: 0.2167, acc: 0.9920, AUC: 0.9997
+Epoch 215/300
+  Train loss: 0.2189, acc: 0.9928
+  Val   loss: 0.2183, acc: 0.9872, AUC: 0.9997
+Epoch 216/300
+  Train loss: 0.2179, acc: 0.9920
+  Val   loss: 0.2165, acc: 0.9904, AUC: 0.9997
+Epoch 217/300
+  Train loss: 0.2208, acc: 0.9893
+  Val   loss: 0.2217, acc: 0.9856, AUC: 0.9997
+Epoch 218/300
+  Train loss: 0.2182, acc: 0.9915
+  Val   loss: 0.2180, acc: 0.9920, AUC: 0.9992
+Epoch 219/300
+  Train loss: 0.2255, acc: 0.9891
+  Val   loss: 0.2113, acc: 0.9936, AUC: 0.9996
+Epoch 220/300
+  Train loss: 0.2138, acc: 0.9952
+  Val   loss: 0.2227, acc: 0.9904, AUC: 0.9994
+Epoch 221/300
+  Train loss: 0.2166, acc: 0.9936
+  Val   loss: 0.2217, acc: 0.9856, AUC: 0.9993
+Epoch 222/300
+  Train loss: 0.2218, acc: 0.9912
+  Val   loss: 0.2200, acc: 0.9888, AUC: 0.9996
+Epoch 223/300
+  Train loss: 0.2192, acc: 0.9907
+  Val   loss: 0.2274, acc: 0.9840, AUC: 0.9993
+Epoch 224/300
+  Train loss: 0.2224, acc: 0.9912
+  Val   loss: 0.2218, acc: 0.9856, AUC: 0.9996
+Epoch 225/300
+  Train loss: 0.2142, acc: 0.9944
+  Val   loss: 0.2285, acc: 0.9856, AUC: 0.9993
+Epoch 226/300
+  Train loss: 0.2164, acc: 0.9941
+  Val   loss: 0.2213, acc: 0.9872, AUC: 0.9994
+Epoch 227/300
+  Train loss: 0.2190, acc: 0.9936
+  Val   loss: 0.2213, acc: 0.9888, AUC: 0.9997
+Epoch 228/300
+  Train loss: 0.2147, acc: 0.9944
+  Val   loss: 0.2159, acc: 0.9904, AUC: 0.9973
+Epoch 229/300
+  Train loss: 0.2205, acc: 0.9925
+  Val   loss: 0.2354, acc: 0.9824, AUC: 0.9994
+Epoch 230/300
+  Train loss: 0.2147, acc: 0.9941
+  Val   loss: 0.2237, acc: 0.9888, AUC: 0.9994
+Epoch 231/300
+  Train loss: 0.2142, acc: 0.9944
+  Val   loss: 0.2191, acc: 0.9888, AUC: 0.9996
+Epoch 232/300
+  Train loss: 0.2169, acc: 0.9944
+  Val   loss: 0.2228, acc: 0.9872, AUC: 0.9996
+Epoch 233/300
+  Train loss: 0.2159, acc: 0.9933
+  Val   loss: 0.2230, acc: 0.9856, AUC: 0.9996
+Epoch 234/300
+  Train loss: 0.2234, acc: 0.9907
+  Val   loss: 0.2227, acc: 0.9872, AUC: 0.9996
+Epoch 235/300
+  Train loss: 0.2185, acc: 0.9928
+  Val   loss: 0.2164, acc: 0.9904, AUC: 0.9995
+Epoch 236/300
+  Train loss: 0.2196, acc: 0.9928
+  Val   loss: 0.2189, acc: 0.9888, AUC: 0.9995
+Epoch 237/300
+  Train loss: 0.2160, acc: 0.9931
+  Val   loss: 0.2187, acc: 0.9904, AUC: 0.9997
+Epoch 238/300
+  Train loss: 0.2204, acc: 0.9909
+  Val   loss: 0.2191, acc: 0.9888, AUC: 0.9997
+Epoch 239/300
+  Train loss: 0.2164, acc: 0.9933
+  Val   loss: 0.2177, acc: 0.9904, AUC: 0.9998
+Epoch 240/300
+  Train loss: 0.2153, acc: 0.9939
+  Val   loss: 0.2203, acc: 0.9840, AUC: 0.9994
+Epoch 241/300
+  Train loss: 0.2143, acc: 0.9955
+  Val   loss: 0.2224, acc: 0.9904, AUC: 0.9983
+Epoch 242/300
+  Train loss: 0.2185, acc: 0.9931
+  Val   loss: 0.2201, acc: 0.9872, AUC: 0.9993
+Epoch 243/300
+  Train loss: 0.2171, acc: 0.9928
+  Val   loss: 0.2223, acc: 0.9824, AUC: 0.9995
+Epoch 244/300
+  Train loss: 0.2227, acc: 0.9896
+  Val   loss: 0.2166, acc: 0.9904, AUC: 0.9994
+Epoch 245/300
+  Train loss: 0.2154, acc: 0.9936
+  Val   loss: 0.2189, acc: 0.9904, AUC: 0.9996
+Epoch 246/300
+  Train loss: 0.2195, acc: 0.9923
+  Val   loss: 0.2163, acc: 0.9904, AUC: 0.9997
+Epoch 247/300
+  Train loss: 0.2156, acc: 0.9944
+  Val   loss: 0.2183, acc: 0.9888, AUC: 0.9998
+Epoch 248/300
+  Train loss: 0.2159, acc: 0.9931
+  Val   loss: 0.2168, acc: 0.9888, AUC: 0.9998
+Epoch 249/300
+  Train loss: 0.2158, acc: 0.9939
+  Val   loss: 0.2186, acc: 0.9904, AUC: 0.9996
+Epoch 250/300
+  Train loss: 0.2298, acc: 0.9872
+  Val   loss: 0.2189, acc: 0.9936, AUC: 0.9997
+Epoch 251/300
+  Train loss: 0.2185, acc: 0.9907
+  Val   loss: 0.2137, acc: 0.9920, AUC: 0.9998
+Epoch 252/300
+  Train loss: 0.2197, acc: 0.9909
+  Val   loss: 0.2126, acc: 0.9936, AUC: 0.9998
+Epoch 253/300
+  Train loss: 0.2151, acc: 0.9939
+  Val   loss: 0.2197, acc: 0.9872, AUC: 0.9997
+Epoch 254/300
+  Train loss: 0.2138, acc: 0.9952
+  Val   loss: 0.2281, acc: 0.9840, AUC: 0.9998
+Epoch 255/300
+  Train loss: 0.2152, acc: 0.9944
+  Val   loss: 0.2170, acc: 0.9920, AUC: 0.9997
+Epoch 256/300
+  Train loss: 0.2187, acc: 0.9915
+  Val   loss: 0.2209, acc: 0.9888, AUC: 0.9993
+Epoch 257/300
+  Train loss: 0.2159, acc: 0.9949
+  Val   loss: 0.2208, acc: 0.9904, AUC: 0.9995
+Epoch 258/300
+  Train loss: 0.2160, acc: 0.9925
+  Val   loss: 0.2305, acc: 0.9840, AUC: 0.9993
+Epoch 259/300
+  Train loss: 0.2161, acc: 0.9939
+  Val   loss: 0.2147, acc: 0.9920, AUC: 0.9998
+Epoch 260/300
+  Train loss: 0.2151, acc: 0.9941
+  Val   loss: 0.2188, acc: 0.9904, AUC: 0.9997
+Epoch 261/300
+  Train loss: 0.2129, acc: 0.9947
+  Val   loss: 0.2226, acc: 0.9872, AUC: 0.9995
+Epoch 262/300
+  Train loss: 0.2129, acc: 0.9947
+  Val   loss: 0.2255, acc: 0.9824, AUC: 0.9995
+Epoch 263/300
+  Train loss: 0.2179, acc: 0.9923
+  Val   loss: 0.2216, acc: 0.9872, AUC: 0.9970
+Epoch 264/300
+  Train loss: 0.2182, acc: 0.9923
+  Val   loss: 0.2288, acc: 0.9872, AUC: 0.9992
+Epoch 265/300
+  Train loss: 0.2134, acc: 0.9955
+  Val   loss: 0.2275, acc: 0.9872, AUC: 0.9993
+Epoch 266/300
+  Train loss: 0.2197, acc: 0.9933
+  Val   loss: 0.2263, acc: 0.9856, AUC: 0.9996
+Epoch 267/300
+  Train loss: 0.2169, acc: 0.9931
+  Val   loss: 0.2268, acc: 0.9856, AUC: 0.9991
+Epoch 268/300
+  Train loss: 0.2243, acc: 0.9888
+  Val   loss: 0.2163, acc: 0.9904, AUC: 0.9997
+Epoch 269/300
+  Train loss: 0.2196, acc: 0.9912
+  Val   loss: 0.2137, acc: 0.9936, AUC: 0.9997
+Epoch 270/300
+  Train loss: 0.2146, acc: 0.9933
+  Val   loss: 0.2178, acc: 0.9888, AUC: 0.9998
+Epoch 271/300
+  Train loss: 0.2115, acc: 0.9955
+  Val   loss: 0.2275, acc: 0.9856, AUC: 0.9996
+Epoch 272/300
+  Train loss: 0.2168, acc: 0.9925
+  Val   loss: 0.2244, acc: 0.9856, AUC: 0.9994
+Epoch 273/300
+  Train loss: 0.2191, acc: 0.9907
+  Val   loss: 0.2151, acc: 0.9888, AUC: 0.9997
+Epoch 274/300
+  Train loss: 0.2194, acc: 0.9901
+  Val   loss: 0.2236, acc: 0.9824, AUC: 0.9996
+Epoch 275/300
+  Train loss: 0.2142, acc: 0.9933
+  Val   loss: 0.2164, acc: 0.9920, AUC: 0.9982
+Epoch 276/300
+  Train loss: 0.2161, acc: 0.9936
+  Val   loss: 0.2129, acc: 0.9920, AUC: 0.9997
+Epoch 277/300
+  Train loss: 0.2152, acc: 0.9928
+  Val   loss: 0.2217, acc: 0.9872, AUC: 0.9991
+Epoch 278/300
+  Train loss: 0.2238, acc: 0.9912
+  Val   loss: 0.2181, acc: 0.9872, AUC: 0.9996
+Epoch 279/300
+  Train loss: 0.2190, acc: 0.9917
+  Val   loss: 0.2123, acc: 0.9888, AUC: 0.9999
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 280/300
+  Train loss: 0.2183, acc: 0.9920
+  Val   loss: 0.2134, acc: 0.9920, AUC: 0.9997
+Epoch 281/300
+  Train loss: 0.2144, acc: 0.9947
+  Val   loss: 0.2217, acc: 0.9888, AUC: 0.9998
+Epoch 282/300
+  Train loss: 0.2127, acc: 0.9952
+  Val   loss: 0.2117, acc: 0.9920, AUC: 0.9998
+Epoch 283/300
+  Train loss: 0.2213, acc: 0.9912
+  Val   loss: 0.2146, acc: 0.9904, AUC: 0.9996
+Epoch 284/300
+  Train loss: 0.2160, acc: 0.9949
+  Val   loss: 0.2137, acc: 0.9936, AUC: 0.9995
+Epoch 285/300
+  Train loss: 0.2109, acc: 0.9965
+  Val   loss: 0.2138, acc: 0.9904, AUC: 0.9992
+Epoch 286/300
+  Train loss: 0.2141, acc: 0.9952
+  Val   loss: 0.2191, acc: 0.9888, AUC: 0.9970
+Epoch 287/300
+  Train loss: 0.2193, acc: 0.9912
+  Val   loss: 0.2303, acc: 0.9840, AUC: 0.9963
+Epoch 288/300
+  Train loss: 0.2218, acc: 0.9915
+  Val   loss: 0.2203, acc: 0.9856, AUC: 0.9995
+Epoch 289/300
+  Train loss: 0.2123, acc: 0.9960
+  Val   loss: 0.2247, acc: 0.9872, AUC: 0.9978
+Epoch 290/300
+  Train loss: 0.2173, acc: 0.9936
+  Val   loss: 0.2213, acc: 0.9888, AUC: 0.9995
+Epoch 291/300
+  Train loss: 0.2146, acc: 0.9941
+  Val   loss: 0.2155, acc: 0.9904, AUC: 0.9988
+Epoch 292/300
+  Train loss: 0.2128, acc: 0.9947
+  Val   loss: 0.2142, acc: 0.9920, AUC: 0.9995
+Epoch 293/300
+  Train loss: 0.2162, acc: 0.9939
+  Val   loss: 0.2188, acc: 0.9888, AUC: 0.9991
+Epoch 294/300
+  Train loss: 0.2111, acc: 0.9952
+  Val   loss: 0.2294, acc: 0.9840, AUC: 0.9997
+Epoch 295/300
+  Train loss: 0.2167, acc: 0.9941
+  Val   loss: 0.2190, acc: 0.9872, AUC: 0.9998
+Epoch 296/300
+  Train loss: 0.2197, acc: 0.9917
+  Val   loss: 0.2085, acc: 0.9952, AUC: 0.9999
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 297/300
+  Train loss: 0.2114, acc: 0.9965
+  Val   loss: 0.2025, acc: 0.9984, AUC: 1.0000
+  [Saved Best] checkpoints/PM_pure_cqt_model.pth
+Epoch 298/300
+  Train loss: 0.2152, acc: 0.9939
+  Val   loss: 0.2241, acc: 0.9808, AUC: 0.9998
+Epoch 299/300
+  Train loss: 0.2153, acc: 0.9939
+  Val   loss: 0.2201, acc: 0.9888, AUC: 0.9993
+Epoch 300/300
+  Train loss: 0.2199, acc: 0.9928
+/root/autodl-tmp/wjx_project/classcify-gw-lensing-pairs-main/SEMD-LensedGW-main/main.py:90: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(best_model_path, map_location=device))
+  Val   loss: 0.2186, acc: 0.9888, AUC: 0.9996
+
+Training complete. Best val AUC: 1.0000
+
+Best model saved at: checkpoints/PM_pure_cqt_model.pth
+Loaded best model for evaluation. Evaluating on test set...
+Test Accuracy: 0.9872
+Lensed predictions saved to   output_PM_pure_cqt_model_res/lensed_results.txt
+Unlensed predictions saved to output_PM_pure_cqt_model_res/unlensed_results.txt
+Confusion matrix saved to output_PM_pure_cqt_model_res/confusion_matrix.png
+Smoothed ROC data saved to output_PM_pure_cqt_model_res/roc_data.txt
+Zoomed ROC curve saved to output_PM_pure_cqt_model_res/roc_curve_zoom.png

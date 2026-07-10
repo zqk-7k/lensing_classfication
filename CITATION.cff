@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "PI-ResNet for Strongly Lensed Gravitational-Wave Pair Classification"
+message: "Please cite the associated paper when using this code or its archived results."
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Fan
+  - family-names: Zhang
+    given-names: Qikai
+  - family-names: Yang
+    given-names: Qiyuan
+  - family-names: Huang
+    given-names: Jiaqing
+  - family-names: Yuan
+    given-names: Yong
+  - family-names: Fan
+    given-names: Xilong
+repository-code: "https://github.com/zqk-7k/lensing_classfication"
+version: "2026.07.10"
+date-released: "2026-07-10"

@@ -1,0 +1,26 @@
+name: gw-lensing-pair-classifier
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy
+  - scikit-learn
+  - pyyaml
+  - tqdm
+  - pillow
+  - h5py
+  - pip
+  - pip:
+      - torch
+      - torchvision
+      - timm
+      - librosa
+      - bilby
+      - astropy
+      - gwpy
+      - lenstronomy

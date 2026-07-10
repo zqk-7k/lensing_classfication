@@ -1,0 +1,23 @@
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+pyyaml
+tqdm
+pillow
+h5py
+
+# Deep learning
+torch
+torchvision
+timm
+
+# Optional for SEMD preprocessing
+librosa
+
+# GW / lensing dependencies
+bilby
+astropy
+gwpy
+lenstronomy

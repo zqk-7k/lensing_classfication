@@ -1,0 +1,4 @@
+SIS | PI-ResNet_Baseline        | Acc: 94.70% | AUC: 0.9920
+SIS | wo_PhysicsFusion          | Acc: 92.30% | AUC: 0.9791
+SIS | wo_SE_Block               | Acc: 93.90% | AUC: 0.9904
+SIS | w_Snake_Activation        | Acc: 90.90% | AUC: 0.9810

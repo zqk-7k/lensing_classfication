@@ -1,0 +1,27 @@
+paper_table,detector,task,model,variant,training_dataset,evaluation_dataset,accuracy,auc
+Table 3,ET,SIS-Pure,PI-ResNet,Full,SIS,SIS,0.9940,1.0000
+Table 3,ET,SIS-Pure,SEMD,Full,SIS,SIS,0.9840,0.9993
+Table 3,ET,SIS-Noisy,PI-ResNet,Full,SIS,SIS,0.9560,0.9910
+Table 3,ET,SIS-Noisy,SEMD,Full,SIS,SIS,0.8980,0.9726
+Table 3,ET,PM-Pure,PI-ResNet,Full,PM,PM,0.9980,1.0000
+Table 3,ET,PM-Pure,SEMD,Full,PM,PM,0.9950,0.9999
+Table 3,ET,PM-Noisy,PI-ResNet,Full,PM,PM,0.9380,0.9897
+Table 3,ET,PM-Noisy,SEMD,Full,PM,PM,0.8770,0.9500
+Table 4,LIGO H1-L1,SIS-Pure,PI-ResNet,Full,SIS,SIS,0.9942,0.9998
+Table 4,LIGO H1-L1,SIS-Pure,SEMD,Full,SIS,SIS,0.9888,0.9996
+Table 4,LIGO H1-L1,SIS-Noisy,PI-ResNet,Full,SIS,SIS,0.8403,0.9168
+Table 4,LIGO H1-L1,SIS-Noisy,SEMD,Full,SIS,SIS,0.7843,0.8762
+Table 4,LIGO H1-L1,PM-Pure,PI-ResNet,Full,PM,PM,0.9948,0.9998
+Table 4,LIGO H1-L1,PM-Pure,SEMD,Full,PM,PM,0.9923,0.9996
+Table 4,LIGO H1-L1,PM-Noisy,PI-ResNet,Full,PM,PM,0.7825,0.8685
+Table 4,LIGO H1-L1,PM-Noisy,SEMD,Full,PM,PM,0.7437,0.8346
+Table 5,ET,SIS-Noisy,PI-ResNet,Full,SIS,SIS,0.9470,0.9926
+Table 5,ET,SIS-Noisy,PI-ResNet,No SE,SIS,SIS,0.9390,0.9904
+Table 5,ET,SIS-Noisy,PI-ResNet,No Fusion,SIS,SIS,0.9230,0.9859
+Table 5,ET,PM-Noisy,PI-ResNet,Full,PM,PM,0.9390,0.9918
+Table 5,ET,PM-Noisy,PI-ResNet,No SE,PM,PM,0.9340,0.9901
+Table 5,ET,PM-Noisy,PI-ResNet,No Fusion,PM,PM,0.9180,0.9845
+Table 6,ET,Generalization,PI-ResNet,Full,SIS,SIS,0.9560,0.9910
+Table 6,ET,Generalization,PI-ResNet,Full,PM,SIS,0.9410,0.9884
+Table 6,ET,Generalization,PI-ResNet,Full,SIS,PM,0.9240,0.9812
+Table 6,ET,Generalization,PI-ResNet,Full,PM,PM,0.9380,0.9897
