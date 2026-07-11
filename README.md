@@ -1,17 +1,17 @@
 # GW Lensing Pair Classification
 
-本目录已于 2026-07-11 完成第一轮清理，当前只保留四条核心研究链路：引力波数据生成、1D 配对分类、SEMD 时频图分类和 Siamese 候选匹配。
+强透镜引力波事件对研究代码，包含四条当前开发链路：数据生成、1D 配对分类、SEMD 时频图分类和 Siamese 候选匹配。
 
 ## 目录
 
-- `src/generation/`：PM、SIS 与 unlensed 波形生成。
-- `src/classifier/`：1D 周期 ResNet 分类器的训练、消融和评估。
-- `src/semd/`：CQT/Mel 预处理及 SEMD 图像分类。
-- `src/matching/`：Siamese 表征学习、候选匹配与评估。
-- `scripts/figures/`：保留的最终论文绘图脚本（历史复现用途）。
-- `data/`：有效数据集；不纳入 Git。
-- `artifacts/`：关键权重、历史运行和汇总结果；不纳入 Git。
-- `docs/`：审计记录与数据说明。
+- `src/generation/`：生成 PM、SIS 和 unlensed 波形数据。
+- `src/classifier/`：训练与评估 1D 周期 ResNet 配对分类器。
+- `src/semd/`：生成 CQT/Mel 时频图并训练 SEMD 分类器。
+- `src/matching/`：训练 Siamese 表征并执行候选匹配。
+- `data/`：本地数据集，不纳入 Git。
+- `docs/DATASETS.md`：数据目录、规模和默认选择。
+
+仓库不保留清理前的实验指标、旧 checkpoint 或论文结果图。后续实验结果必须由当前 Git 版本重新生成，避免混用不同数据规模、配置或代码版本的数字。
 
 ## 环境
 
@@ -21,14 +21,14 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-默认数据根目录是 `data/ligo_full`。若要切换数据集，统一使用环境变量：
+默认读取 `data/ligo_full`。可通过环境变量切换数据根目录和临时目录：
 
 ```bash
 export GW_DATA_ROOT=/absolute/path/to/dataset
 export GW_TMPDIR=/absolute/path/to/tmp
 ```
 
-## 入口
+## 主要入口
 
 ```bash
 # 1D 分类器
@@ -39,11 +39,9 @@ python src/classifier/train_ablation.py --dataset SIS --exp_name Baseline
 python src/semd/preprocess_offline.py
 python src/semd/main.py
 
-# Siamese matching（单卡调试或 torchrun）
+# Siamese matching
 python src/matching/main_ddp.py
 torchrun --nproc_per_node=4 src/matching/main_ddp.py
 ```
 
-训练前请先在对应目录的 `config*.py` 中确认 `MODEL_TYPE`、`DATA_MODE`、batch size 和 GPU 数量。第一轮清理只建立了清晰、可追踪的基线，没有启动新的训练。
-
-更详细的保留/删除依据见 `docs/PROJECT_AUDIT.md`。
+运行前应在对应的 `config*.py` 中确认 `MODEL_TYPE`、`DATA_MODE`、batch size 和 GPU 数量。新实验建议从空的 `runs/` 开始，并将 Git commit、数据根目录、随机种子和完整配置写入结果元数据。
