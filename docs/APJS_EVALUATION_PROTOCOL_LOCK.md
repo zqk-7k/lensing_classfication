@@ -28,7 +28,7 @@ For each lens family and each calibration/evaluation partition:
 - Hard negative: image 1 from one lensed source paired with image 2 from a different lensed source.
 - Easy negative: a lensed image-1 event paired with an unlensed event.
 - Background construction seed: 20260711 plus a fixed, documented lens/partition offset.
-- Sources are assigned to 50 disjoint source blocks. Background pairs may only use events from the same block. Bootstrap resamples blocks, never individual pair rows.
+- Sources are assigned to 10 disjoint source blocks. Background pairs may only use events from the same block. Bootstrap resamples blocks, never individual pair rows. This was revised from 50 to 10 blocks before any 0228 inference because 50 calibration blocks cannot supply 70,000 unique within-block hard-negative event pairs; the revision prevents duplicated pairs.
 - Hard-negative and easy-negative FPP are reported separately in addition to the fixed 70/30 mixture.
 
 No additional background pairs will be added after score inspection. A future larger background study must be labeled separately and cannot replace the locked primary analysis.
