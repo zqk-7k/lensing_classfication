@@ -61,6 +61,8 @@ class CQTPairDataset(Dataset):
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--lens", choices=["SIS", "PM"], required=True)
+    parser.add_argument("--checkpoint-lens", choices=["SIS", "PM"], default=None,
+                        help="Checkpoint lens family; defaults to --lens. Set differently for cross-lens transfer.")
     parser.add_argument("--manifest-dir", default=str(ROOT / "experiments/apjs_resubmission/manifests/0228_pairs"))
     parser.add_argument("--cache-dir", default=str(ROOT / "runs/apjs_resubmission_final_v1/cqt_cache_0228"))
     parser.add_argument("--output-dir", default=str(ROOT / "runs/apjs_resubmission_final_v1/predictions_0228"))
@@ -73,6 +75,7 @@ def parse_args():
 def main():
     args = parse_args()
     lower = args.lens.lower()
+    checkpoint_lower = (args.checkpoint_lens or args.lens).lower()
     manifests = [Path(args.manifest_dir) / f"0228_{lower}_{part}_pairs.csv.gz"
                  for part in ("calibration", "evaluation")]
     frame = pd.concat([pd.read_csv(path) for path in manifests], ignore_index=True)
@@ -83,7 +86,7 @@ def main():
     dataset = CQTPairDataset(frame, image1, image2, unlensed)
     loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=False, num_workers=args.workers,
                         pin_memory=True, persistent_workers=args.workers > 0)
-    checkpoint = ROOT / f"runs/apjs_resubmission_final_v1/cqt_deit_{lower}_noisy_seed42/best.pth"
+    checkpoint = ROOT / f"runs/apjs_resubmission_final_v1/cqt_deit_{checkpoint_lower}_noisy_seed42/best.pth"
     device = torch.device(args.device)
     model = get_deit_tiny_distilled_enhanced(num_classes=2, pretrained=False, hidden_dim=512,
                                              dropout_rate=0.5, freeze_backbone=False).to(device)
@@ -104,18 +107,20 @@ def main():
     output["cqt_deit_score"] = probabilities[:, 1]
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    output_path = output_dir / f"cqt_deit_predictions_0228_{lower}.csv.gz"
+    suffix = lower if checkpoint_lower == lower else f"{lower}_checkpoint_{checkpoint_lower}"
+    output_path = output_dir / f"cqt_deit_predictions_0228_{suffix}.csv.gz"
     output.to_csv(output_path, index=False, compression="gzip")
     cache_metadata = cache / "cache_metadata.json"
     metadata = {
-        "lens": args.lens, "rows": len(output), "checkpoint": str(checkpoint),
+        "evaluation_lens": args.lens, "checkpoint_lens": checkpoint_lower.upper(),
+        "rows": len(output), "checkpoint": str(checkpoint),
         "checkpoint_sha256": sha256(checkpoint),
         "manifest_sha256": {path.name: sha256(path) for path in manifests},
         "cache_metadata_sha256": sha256(cache_metadata),
         "prediction_path": str(output_path), "prediction_sha256": sha256(output_path),
         "score_inspected_during_inference": False,
     }
-    (output_dir / f"cqt_deit_predictions_0228_{lower}.metadata.json").write_text(
+    (output_dir / f"cqt_deit_predictions_0228_{suffix}.metadata.json").write_text(
         json.dumps(metadata, indent=2), encoding="utf-8")
     print(json.dumps(metadata, indent=2))
 

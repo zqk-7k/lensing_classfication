@@ -59,6 +59,8 @@ class PairDataset(Dataset):
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--lens", choices=["SIS", "PM"], required=True)
+    parser.add_argument("--checkpoint-lens", choices=["SIS", "PM"], default=None,
+                        help="Checkpoint lens family; defaults to --lens. Set differently for cross-lens transfer.")
     parser.add_argument("--data-root", default="/root/autodl-tmp/qkzhang")
     parser.add_argument("--manifest-dir", default=str(ROOT / "experiments/apjs_resubmission/manifests/0228_pairs"))
     parser.add_argument("--output-dir", default=str(ROOT / "runs/apjs_resubmission_final_v1/predictions_0228"))
@@ -71,6 +73,7 @@ def parse_args():
 def main():
     args = parse_args()
     lens_lower = args.lens.lower()
+    checkpoint_lower = (args.checkpoint_lens or args.lens).lower()
     manifest_paths = [Path(args.manifest_dir) / f"0228_{lens_lower}_{part}_pairs.csv.gz"
                       for part in ("calibration", "evaluation")]
     frame = pd.concat([pd.read_csv(path) for path in manifest_paths], ignore_index=True)
@@ -81,7 +84,7 @@ def main():
     dataset = PairDataset(frame, lensed_1, lensed_2, unlensed)
     loader = DataLoader(dataset, batch_size=args.batch_size, shuffle=False, num_workers=args.workers,
                         pin_memory=True, persistent_workers=args.workers > 0)
-    checkpoint = ROOT / f"runs/apjs_resubmission_final_v1/pi_resnet_{lens_lower}_noisy_seed42/best.pt"
+    checkpoint = ROOT / f"runs/apjs_resubmission_final_v1/pi_resnet_{checkpoint_lower}_noisy_seed42/best.pt"
     device = torch.device(args.device)
     model = BinaryPeriodicResNet1D_Ablation(in_channels=1, d_model=256, width_scale=4.0,
                                             use_snake=False, use_se=True,
@@ -100,16 +103,18 @@ def main():
     output["pi_score"] = 1.0 / (1.0 + np.exp(-logits.astype(np.float64)))
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    output_path = output_dir / f"pi_predictions_0228_{lens_lower}.csv.gz"
+    suffix = lens_lower if checkpoint_lower == lens_lower else f"{lens_lower}_checkpoint_{checkpoint_lower}"
+    output_path = output_dir / f"pi_predictions_0228_{suffix}.csv.gz"
     output.to_csv(output_path, index=False, compression="gzip")
     metadata = {
-        "lens": args.lens, "rows": len(output), "checkpoint": str(checkpoint),
+        "evaluation_lens": args.lens, "checkpoint_lens": checkpoint_lower.upper(),
+        "rows": len(output), "checkpoint": str(checkpoint),
         "checkpoint_sha256": sha256(checkpoint),
         "manifest_sha256": {path.name: sha256(path) for path in manifest_paths},
         "prediction_path": str(output_path), "prediction_sha256": sha256(output_path),
         "score_inspected_during_inference": False,
     }
-    (output_dir / f"pi_predictions_0228_{lens_lower}.metadata.json").write_text(
+    (output_dir / f"pi_predictions_0228_{suffix}.metadata.json").write_text(
         json.dumps(metadata, indent=2), encoding="utf-8")
     print(json.dumps(metadata, indent=2))
 
