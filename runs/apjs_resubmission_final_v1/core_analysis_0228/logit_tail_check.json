@@ -1,0 +1,98 @@
+{
+  "status": "complete",
+  "results": {
+    "sis": {
+      "pi_resnet": {
+        "0.001": {
+          "score_threshold": 0.9981431716530528,
+          "logit_threshold": 6.287027,
+          "identical_selected_pairs": true,
+          "selection_jaccard": 1.0,
+          "score_selected": 1022,
+          "logit_selected": 1022,
+          "score_unique_values": 99417,
+          "logit_unique_values": 99417
+        },
+        "0.0001": {
+          "score_threshold": 0.9999962979827796,
+          "logit_threshold": 12.506629,
+          "identical_selected_pairs": true,
+          "selection_jaccard": 1.0,
+          "score_selected": 182,
+          "logit_selected": 182,
+          "score_unique_values": 99417,
+          "logit_unique_values": 99417
+        }
+      },
+      "cqt_deit": {
+        "0.001": {
+          "score_threshold": 0.9438525,
+          "logit_threshold": 2.8219886,
+          "identical_selected_pairs": true,
+          "selection_jaccard": 1.0,
+          "score_selected": 779,
+          "logit_selected": 779,
+          "score_unique_values": 100580,
+          "logit_unique_values": 101411
+        },
+        "0.0001": {
+          "score_threshold": 0.9561654,
+          "logit_threshold": 3.0825076,
+          "identical_selected_pairs": true,
+          "selection_jaccard": 1.0,
+          "score_selected": 258,
+          "logit_selected": 258,
+          "score_unique_values": 100580,
+          "logit_unique_values": 101411
+        }
+      }
+    },
+    "pm": {
+      "pi_resnet": {
+        "0.001": {
+          "score_threshold": 0.9999204273671976,
+          "logit_threshold": 9.438761,
+          "identical_selected_pairs": true,
+          "selection_jaccard": 1.0,
+          "score_selected": 461,
+          "logit_selected": 461,
+          "score_unique_values": 99534,
+          "logit_unique_values": 99536
+        },
+        "0.0001": {
+          "score_threshold": 0.9999999730573668,
+          "logit_threshold": 17.429556,
+          "identical_selected_pairs": true,
+          "selection_jaccard": 1.0,
+          "score_selected": 64,
+          "logit_selected": 64,
+          "score_unique_values": 99534,
+          "logit_unique_values": 99536
+        }
+      },
+      "cqt_deit": {
+        "0.001": {
+          "score_threshold": 0.9609393,
+          "logit_threshold": 3.2027947,
+          "identical_selected_pairs": true,
+          "selection_jaccard": 1.0,
+          "score_selected": 241,
+          "logit_selected": 241,
+          "score_unique_values": 99531,
+          "logit_unique_values": 101050
+        },
+        "0.0001": {
+          "score_threshold": 0.96391076,
+          "logit_threshold": 3.2850039,
+          "identical_selected_pairs": true,
+          "selection_jaccard": 1.0,
+          "score_selected": 46,
+          "logit_selected": 46,
+          "score_unique_values": 99531,
+          "logit_unique_values": 101050
+        }
+      }
+    }
+  },
+  "conclusion_rule": "A monotonic transform cannot change empirical rank selections unless stored-score ties/rounding alter the order."
+}
