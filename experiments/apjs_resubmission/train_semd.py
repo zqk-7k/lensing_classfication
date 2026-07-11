@@ -43,6 +43,11 @@ def parse_args():
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument(
+        "--pretrained-weights",
+        default=str(ROOT / "runs" / "apjs_resubmission" / "pretrained" /
+                    "deit_tiny_distilled_patch16_224-b40b3cf7.pth"),
+    )
     return parser.parse_args()
 
 
@@ -110,9 +115,21 @@ def main():
                             num_workers=args.workers, pin_memory=True)
 
     device = torch.device(args.device)
-    model = get_deit_tiny_distilled_enhanced(num_classes=2, pretrained=True,
+    model = get_deit_tiny_distilled_enhanced(num_classes=2, pretrained=False,
                                              hidden_dim=512, dropout_rate=0.5,
                                              freeze_backbone=False).to(device)
+    pretrained_path = Path(args.pretrained_weights)
+    if not pretrained_path.is_file():
+        raise FileNotFoundError(
+            f"Official DeiT pretrained weights are required but missing: {pretrained_path}"
+        )
+    raw_state = torch.load(pretrained_path, map_location="cpu", weights_only=False)
+    state = raw_state.get("model", raw_state)
+    incompatible = model.load_state_dict(state, strict=False)
+    non_head_missing = [key for key in incompatible.missing_keys
+                        if not key.startswith(("head.", "head_dist."))]
+    if non_head_missing:
+        raise RuntimeError(f"Unexpected missing backbone keys: {non_head_missing}")
     criterion = nn.CrossEntropyLoss(label_smoothing=0.1)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.epochs, eta_min=1e-6)
@@ -122,6 +139,7 @@ def main():
         "train_catalog": "0222-derived CQT images", "reserved_test_catalog": "0228",
         "selection_metric": "validation_auc", "implementation": "SEMD-inspired",
         "image_root_resolved": str(image_root),
+        "pretrained_weights_sha256": sha256(pretrained_path),
     }
     (run_dir / "config.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
 
