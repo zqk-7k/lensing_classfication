@@ -1,0 +1,15 @@
+{
+  "evaluation_lens": "SIS",
+  "checkpoint_lens": "PM",
+  "rows": 202500,
+  "checkpoint": "artifacts/training/cqt_deit_pm_noisy_seed42/best.pth",
+  "checkpoint_sha256": "82f3d394542d84be10e49392dbe86f20618e81cfe6bd16b045be290ea30da270",
+  "manifest_sha256": {
+    "0228_sis_calibration_pairs.csv.gz": "682a9bfd4024f372968bc63b1b911568ab999dd93fdea7250bb326ecf6284d5f",
+    "0228_sis_evaluation_pairs.csv.gz": "5ee897f3e1b0fb93377858ec8682b67670122b50a539f975bbc4eb16912f1869"
+  },
+  "cache_metadata_sha256": "5cfeba0eaaf2f9f4a1e16416c42f9c2f6714a3f9ed2c8348903a277ee18fd371",
+  "prediction_path": "results/predictions/cqt_deit_predictions_0228_sis_checkpoint_pm.csv.gz",
+  "prediction_sha256": "2b901e96d84ff9969c4f8256ad8511b288595eb158578613310922ceb8e53ed0",
+  "score_inspected_during_inference": false
+}

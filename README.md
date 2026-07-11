@@ -1,19 +1,65 @@
-# GW Lensing Pair Classification
+# Calibrated Pair Verification for Strongly Lensed Gravitational Waves
 
-强透镜引力波事件对研究代码，包含四条当前开发链路：数据生成、1D 配对分类、SEMD 时频图分类和 Siamese 候选匹配。
+This repository provides the code, frozen evaluation manifests, prediction scores,
+and derived results for a controlled comparison of two gravitational-wave
+event-pair ranking methods:
 
-## 目录
+- **PI-ResNet**, a one-dimensional Siamese residual network operating directly on
+  peak-aligned strain segments; and
+- **CQT--DeiT**, a two-dimensional baseline inspired by the published SEMD
+  framework and operating on constant-Q representations.
 
-- `src/generation/`：生成 PM、SIS 和 unlensed 波形数据。
-- `src/classifier/`：训练与评估 1D 周期 ResNet 配对分类器。
-- `src/semd/`：生成 CQT/Mel 时频图并训练 SEMD 分类器。
-- `src/matching/`：训练 Siamese 表征并执行候选匹配。
-- `data/`：本地数据集，不纳入 Git。
-- `docs/DATASETS.md`：数据目录、规模和默认选择。
+The project addresses *pair verification*: given two already identified event
+segments, it assigns a ranking score for consistency with strong lensing. It is
+not a complete catalog search, false-alarm-rate pipeline, or real-noise analysis.
 
-仓库不保留清理前的实验指标、旧 checkpoint 或论文结果图。后续实验结果必须由当前 Git 版本重新生成，避免混用不同数据规模、配置或代码版本的数字。
+[中文说明](README.zh-CN.md)
 
-## 环境
+## Main results
+
+All headline values use an independently generated held-out catalog, a calibration
+partition that is separate from final evaluation, and source-block uncertainty
+estimation. At the preregistered primary operating point of per-pair false-positive
+probability (FPP) $10^{-3}$, PI-ResNet reaches efficiencies of 53.5% (SIS) and
+22.7% (point-mass), exceeding CQT--DeiT by 15.8 and 13.5 percentage points,
+respectively. The complete tables, confidence intervals, tail behavior, selection
+functions, transfer tests, and diagnostic null results are documented in
+[docs/RESULTS.md](docs/RESULTS.md).
+
+The $10^{-4}$ tail is reported without concealment: PI-ResNet is worse than the
+baseline for SIS at that operating point. The repository therefore treats
+$10^{-3}$ as primary and the more extreme tail as a resolution/calibration
+diagnostic.
+
+## Repository layout
+
+```text
+src/
+  classifier/          PI-ResNet model and pair dataset
+  cqt_deit/            CQT--DeiT comparison model
+  generation/          simulated catalog generation programs
+experiments/
+  reproducibility/     locked split, inference, statistics, and figure scripts
+results/
+  core/                primary tables, figures, and unified predictions
+  predictions/         model-specific per-pair scores
+  transfer/            cross-lens-family transfer results
+  diagnostics/         controlled physical/model diagnostics
+  benchmarks/          measured throughput
+  training/            compact training records (not model weights)
+docs/                   methods, result index, limitations, and audit trail
+release/zenodo/         archival-release manifest tools
+```
+
+Large input catalogs, CQT caches, pretrained weights, and trained checkpoints are
+not stored in Git. Their expected locations and integrity records are described in
+[docs/ARTIFACTS.md](docs/ARTIFACTS.md). Compact prediction files and all data needed
+to reproduce the reported statistical analysis are retained in `results/`.
+
+## Environment
+
+Python 3.10 or later is recommended. Install the declared dependencies in a clean
+environment:
 
 ```bash
 python -m venv .venv
@@ -21,27 +67,35 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-默认读取 `data/ligo_full`。可通过环境变量切换数据根目录和临时目录：
+Place catalogs under `data/`, or pass an explicit `--data-root`. GPU inference and
+training require a CUDA-enabled PyTorch installation.
+
+## Reproduce the analysis
+
+The public result tables and figures can be regenerated from the frozen prediction
+files without model checkpoints:
 
 ```bash
-export GW_DATA_ROOT=/absolute/path/to/dataset
-export GW_TMPDIR=/absolute/path/to/tmp
+python experiments/reproducibility/analyze_0228_core.py
+python experiments/reproducibility/analyze_snr_matching_uncertainty.py
+python experiments/reproducibility/make_core_figures.py
+python experiments/reproducibility/analyze_cross_lens_transfer.py
 ```
 
-## 主要入口
+For the full path from catalog audit through inference, see
+[experiments/reproducibility/README.md](experiments/reproducibility/README.md).
+The statistical rules were frozen before held-out scores were inspected; the
+protocol is preserved in [docs/EVALUATION_PROTOCOL.md](docs/EVALUATION_PROTOCOL.md).
 
-```bash
-# 1D 分类器
-python src/classifier/train.py
-python src/classifier/train_ablation.py --dataset SIS --exp_name Baseline
+## Scientific scope
 
-# SEMD：先生成时频图，再训练
-python src/semd/preprocess_offline.py
-python src/semd/main.py
+The current evidence is limited to simulated, stationary Gaussian noise; the
+training prior uses $y\in[0.01,0.3]$; inputs are peak aligned; and the study does
+not validate glitches or a catalog-level false-alarm rate. See
+[docs/LIMITATIONS.md](docs/LIMITATIONS.md) before reusing the scores operationally.
 
-# Siamese matching
-python src/matching/main_ddp.py
-torchrun --nproc_per_node=4 src/matching/main_ddp.py
-```
+## Citation and archival release
 
-运行前应在对应的 `config*.py` 中确认 `MODEL_TYPE`、`DATA_MODE`、batch size 和 GPU 数量。新实验建议从空的 `runs/` 开始，并将 Git commit、数据根目录、随机种子和完整配置写入结果元数据。
+The archival package is prepared under `release/zenodo/`. A DOI and formal citation
+metadata will be added when the associated manuscript record is finalized. Until
+then, cite the repository commit used in your analysis.

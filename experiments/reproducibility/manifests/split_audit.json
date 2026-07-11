@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "manifest": "experiments/reproducibility/manifests/split_0222_seed42.npz",
+  "manifest_sha256": "f871af69d4aac09b9d05488b0370bbbfe001a73229df575b5b96cd97f8b37f52",
+  "random_seed": 42,
+  "train_fraction": 0.8,
+  "catalog_sizes": {
+    "sis": 2500,
+    "pm": 2500,
+    "unlensed": 5000
+  },
+  "split_sizes": {
+    "sis_train_source_ids": 2000,
+    "sis_val_source_ids": 500,
+    "pm_train_source_ids": 2000,
+    "pm_val_source_ids": 500,
+    "unlensed_train_source_ids": 4000,
+    "unlensed_val_source_ids": 1000
+  },
+  "disjointness_checks": {
+    "sis_train_val_disjoint": true,
+    "pm_train_val_disjoint": true,
+    "unlensed_train_val_disjoint": true
+  },
+  "catalog_files": {
+    "sis_image_1": "${GW_DATA_ROOT}/SIS_data_0222/SIS_data_strain_1.npy",
+    "sis_image_2": "${GW_DATA_ROOT}/SIS_data_0222/SIS_data_strain_2.npy",
+    "pm_image_1": "${GW_DATA_ROOT}/PM_data_0222/PM_data_strain_1.npy",
+    "pm_image_2": "${GW_DATA_ROOT}/PM_data_0222/PM_data_strain_2.npy",
+    "unlensed": "${GW_DATA_ROOT}/Unlensed_data_0222/unlensed_data_strain.npy"
+  },
+  "catalog_sha256": {
+    "sis_image_1": "c786ac5b2e977613e5a5730ede4aabeb1ea2f37ffd45d25a9c21a250ca4672ab",
+    "sis_image_2": "39bc60137ff37fe974ce8b84873a0f19c5d6c964ad4b8426568411f09fe2a9d7",
+    "pm_image_1": "9dfc4658d6fd599989009b18035621561e0b5b03692b043c6fda71e808d17a4a",
+    "pm_image_2": "dc6480452b9f62498f3a52aa63d5dbab71b1b7d9dcbeef67d905b426d30fbd5a",
+    "unlensed": "e31011fab8f52e69264f57b5804ff1f37bf21827adccd6338c0c9fa97b0aee7c"
+  }
+}

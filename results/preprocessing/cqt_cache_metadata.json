@@ -1,0 +1,63 @@
+{
+  "status": "pass",
+  "events_cached": 15000,
+  "workers": 48,
+  "preprocessing_validation": {
+    "SIS": {
+      "reference": "${GW_DATA_ROOT}/dataset_images_SIS_noisy_cqt/lensed/pos_0000.png",
+      "shape_equal": true,
+      "max_abs_pixel_difference": 3,
+      "mean_abs_pixel_difference": 0.0008104804421768708,
+      "exact_pixel_fraction": 0.9994286777210885
+    },
+    "PM": {
+      "reference": "${GW_DATA_ROOT}/dataset_images_PM_noisy_cqt/lensed/pos_0000.png",
+      "shape_equal": true,
+      "max_abs_pixel_difference": 3,
+      "mean_abs_pixel_difference": 0.0013153698979591836,
+      "exact_pixel_fraction": 0.9990035076530612
+    }
+  },
+  "products": {
+    "sis_img1_spectra.npy": {
+      "shape": [
+        2500,
+        112,
+        224
+      ],
+      "sha256": "e89bdca187a05183930cbeee9990b2a2a9d3346dffcc5b80c295dd7431355ebf"
+    },
+    "sis_img2_spectra.npy": {
+      "shape": [
+        2500,
+        112,
+        224
+      ],
+      "sha256": "975ac17588b0436b34b50e7cda0fe2a2096518f9f9e409fc88e1a992996f8901"
+    },
+    "pm_img1_spectra.npy": {
+      "shape": [
+        2500,
+        112,
+        224
+      ],
+      "sha256": "1bc322c95502071e82ef76d94e0781c2ebe4e6ceec1b2a7289c41e94fd75bf30"
+    },
+    "pm_img2_spectra.npy": {
+      "shape": [
+        2500,
+        112,
+        224
+      ],
+      "sha256": "8cf2bbf42dc62058a87a980a51ece51a389a43d9d0753ba99f9b6fa7ac82b0c8"
+    },
+    "unlensed_spectra.npy": {
+      "shape": [
+        5000,
+        112,
+        224
+      ],
+      "sha256": "2595a3e124a9d1090ee32634815c4d790fa24d2dfa1c1cb68eda6ede027b8027"
+    }
+  }
+}

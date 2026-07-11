@@ -1,0 +1,507 @@
+{
+  "status": "pass",
+  "interpretation": "Discrete code-level delay intervention at fixed waveform, magnification, and noise; peak alignment removes the intervention before classifier preprocessing.",
+  "scope_limit": "This establishes invariance only for the present discrete peak-aligned pair-verification input, not general lens-redshift independence.",
+  "source_ids": [
+    0,
+    127,
+    511,
+    1023,
+    2047
+  ],
+  "delay_shift_samples": [
+    -16384,
+    -4096,
+    -1024,
+    1024,
+    4096,
+    16384
+  ],
+  "maximum_over_all_trials": {
+    "max_abs_difference": 2.384185791015625e-07,
+    "mean_abs_difference": 4.730793534690747e-09,
+    "relative_l2_difference": 2.1428037796219815e-08
+  },
+  "trials": [
+    {
+      "lens": "SIS",
+      "source_id": 0,
+      "delay_shift_samples": -16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.160216976993979e-09,
+      "relative_l2_difference": 1.3653398137676968e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 0,
+      "delay_shift_samples": -4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.160216976993979e-09,
+      "relative_l2_difference": 1.3653398137676968e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 0,
+      "delay_shift_samples": -1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.160216976993979e-09,
+      "relative_l2_difference": 1.3653398137676968e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 0,
+      "delay_shift_samples": 1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.160216976993979e-09,
+      "relative_l2_difference": 1.3653398137676968e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 0,
+      "delay_shift_samples": 4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.160216976993979e-09,
+      "relative_l2_difference": 1.3653398137676968e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 0,
+      "delay_shift_samples": 16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.160216976993979e-09,
+      "relative_l2_difference": 1.3653398137676968e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 127,
+      "delay_shift_samples": -16384,
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 2.0633885711163202e-09,
+      "relative_l2_difference": 9.308188387318163e-09
+    },
+    {
+      "lens": "SIS",
+      "source_id": 127,
+      "delay_shift_samples": -4096,
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 2.0633885711163202e-09,
+      "relative_l2_difference": 9.308188387318163e-09
+    },
+    {
+      "lens": "SIS",
+      "source_id": 127,
+      "delay_shift_samples": -1024,
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 2.0633885711163202e-09,
+      "relative_l2_difference": 9.308188387318163e-09
+    },
+    {
+      "lens": "SIS",
+      "source_id": 127,
+      "delay_shift_samples": 1024,
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 2.0633885711163202e-09,
+      "relative_l2_difference": 9.308188387318163e-09
+    },
+    {
+      "lens": "SIS",
+      "source_id": 127,
+      "delay_shift_samples": 4096,
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 2.0633885711163202e-09,
+      "relative_l2_difference": 9.308188387318163e-09
+    },
+    {
+      "lens": "SIS",
+      "source_id": 127,
+      "delay_shift_samples": 16384,
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 2.0633885711163202e-09,
+      "relative_l2_difference": 9.308188387318163e-09
+    },
+    {
+      "lens": "SIS",
+      "source_id": 511,
+      "delay_shift_samples": -16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 4.237691086927953e-09,
+      "relative_l2_difference": 2.1428037796219815e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 511,
+      "delay_shift_samples": -4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 4.237691086927953e-09,
+      "relative_l2_difference": 2.1428037796219815e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 511,
+      "delay_shift_samples": -1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 4.237691086927953e-09,
+      "relative_l2_difference": 2.1428037796219815e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 511,
+      "delay_shift_samples": 1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 4.237691086927953e-09,
+      "relative_l2_difference": 2.1428037796219815e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 511,
+      "delay_shift_samples": 4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 4.237691086927953e-09,
+      "relative_l2_difference": 2.1428037796219815e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 511,
+      "delay_shift_samples": 16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 4.237691086927953e-09,
+      "relative_l2_difference": 2.1428037796219815e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 1023,
+      "delay_shift_samples": -16384,
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 2.7455424600475453e-09,
+      "relative_l2_difference": 1.017647728206433e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 1023,
+      "delay_shift_samples": -4096,
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 2.7455424600475453e-09,
+      "relative_l2_difference": 1.017647728206433e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 1023,
+      "delay_shift_samples": -1024,
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 2.7455424600475453e-09,
+      "relative_l2_difference": 1.017647728206433e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 1023,
+      "delay_shift_samples": 1024,
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 2.7455424600475453e-09,
+      "relative_l2_difference": 1.017647728206433e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 1023,
+      "delay_shift_samples": 4096,
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 2.7455424600475453e-09,
+      "relative_l2_difference": 1.017647728206433e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 1023,
+      "delay_shift_samples": 16384,
+      "max_abs_difference": 1.1920928955078125e-07,
+      "mean_abs_difference": 2.7455424600475453e-09,
+      "relative_l2_difference": 1.017647728206433e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 2047,
+      "delay_shift_samples": -16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.958534833259364e-09,
+      "relative_l2_difference": 1.714987811053767e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 2047,
+      "delay_shift_samples": -4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.958534833259364e-09,
+      "relative_l2_difference": 1.714987811053767e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 2047,
+      "delay_shift_samples": -1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.958534833259364e-09,
+      "relative_l2_difference": 1.714987811053767e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 2047,
+      "delay_shift_samples": 1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.958534833259364e-09,
+      "relative_l2_difference": 1.714987811053767e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 2047,
+      "delay_shift_samples": 4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.958534833259364e-09,
+      "relative_l2_difference": 1.714987811053767e-08
+    },
+    {
+      "lens": "SIS",
+      "source_id": 2047,
+      "delay_shift_samples": 16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.958534833259364e-09,
+      "relative_l2_difference": 1.714987811053767e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 0,
+      "delay_shift_samples": -16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 1.9650201465992723e-09,
+      "relative_l2_difference": 1.3040855370168816e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 0,
+      "delay_shift_samples": -4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 1.9650201465992723e-09,
+      "relative_l2_difference": 1.3040855370168816e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 0,
+      "delay_shift_samples": -1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 1.9650201465992723e-09,
+      "relative_l2_difference": 1.3040855370168816e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 0,
+      "delay_shift_samples": 1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 1.9650201465992723e-09,
+      "relative_l2_difference": 1.3040855370168816e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 0,
+      "delay_shift_samples": 4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 1.9650201465992723e-09,
+      "relative_l2_difference": 1.3040855370168816e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 0,
+      "delay_shift_samples": 16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 1.9650201465992723e-09,
+      "relative_l2_difference": 1.3040855370168816e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 127,
+      "delay_shift_samples": -16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 2.2373001229425427e-09,
+      "relative_l2_difference": 1.0915717065884943e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 127,
+      "delay_shift_samples": -4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 2.2373001229425427e-09,
+      "relative_l2_difference": 1.0915717065884943e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 127,
+      "delay_shift_samples": -1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 2.2373001229425427e-09,
+      "relative_l2_difference": 1.0915717065884943e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 127,
+      "delay_shift_samples": 1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 2.2373001229425427e-09,
+      "relative_l2_difference": 1.0915717065884943e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 127,
+      "delay_shift_samples": 4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 2.2373001229425427e-09,
+      "relative_l2_difference": 1.0915717065884943e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 127,
+      "delay_shift_samples": 16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 2.2373001229425427e-09,
+      "relative_l2_difference": 1.0915717065884943e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 511,
+      "delay_shift_samples": -16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.95143828768596e-09,
+      "relative_l2_difference": 1.5352166332990434e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 511,
+      "delay_shift_samples": -4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.95143828768596e-09,
+      "relative_l2_difference": 1.5352166332990434e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 511,
+      "delay_shift_samples": -1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.95143828768596e-09,
+      "relative_l2_difference": 1.5352166332990434e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 511,
+      "delay_shift_samples": 1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.95143828768596e-09,
+      "relative_l2_difference": 1.5352166332990434e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 511,
+      "delay_shift_samples": 4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.95143828768596e-09,
+      "relative_l2_difference": 1.5352166332990434e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 511,
+      "delay_shift_samples": 16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 3.95143828768596e-09,
+      "relative_l2_difference": 1.5352166332990434e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 1023,
+      "delay_shift_samples": -16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 4.730793534690747e-09,
+      "relative_l2_difference": 1.9991617209419435e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 1023,
+      "delay_shift_samples": -4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 4.730793534690747e-09,
+      "relative_l2_difference": 1.9991617209419435e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 1023,
+      "delay_shift_samples": -1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 4.730793534690747e-09,
+      "relative_l2_difference": 1.9991617209419435e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 1023,
+      "delay_shift_samples": 1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 4.730793534690747e-09,
+      "relative_l2_difference": 1.9991617209419435e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 1023,
+      "delay_shift_samples": 4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 4.730793534690747e-09,
+      "relative_l2_difference": 1.9991617209419435e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 1023,
+      "delay_shift_samples": 16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 4.730793534690747e-09,
+      "relative_l2_difference": 1.9991617209419435e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 2047,
+      "delay_shift_samples": -16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 2.915498953370843e-09,
+      "relative_l2_difference": 1.5343854071252075e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 2047,
+      "delay_shift_samples": -4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 2.915498953370843e-09,
+      "relative_l2_difference": 1.5343854071252075e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 2047,
+      "delay_shift_samples": -1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 2.915498953370843e-09,
+      "relative_l2_difference": 1.5343854071252075e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 2047,
+      "delay_shift_samples": 1024,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 2.915498953370843e-09,
+      "relative_l2_difference": 1.5343854071252075e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 2047,
+      "delay_shift_samples": 4096,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 2.915498953370843e-09,
+      "relative_l2_difference": 1.5343854071252075e-08
+    },
+    {
+      "lens": "PM",
+      "source_id": 2047,
+      "delay_shift_samples": 16384,
+      "max_abs_difference": 2.384185791015625e-07,
+      "mean_abs_difference": 2.915498953370843e-09,
+      "relative_l2_difference": 1.5343854071252075e-08
+    }
+  ]
+}

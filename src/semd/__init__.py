@@ -1,1 +1,0 @@
-"""SEMD image-classification pipeline."""

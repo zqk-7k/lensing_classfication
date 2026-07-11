@@ -10,17 +10,26 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 
 PATTERNS = [
-    "docs/APJS_*.md",
-    "experiments/apjs_resubmission/manifests/**/*",
-    "runs/apjs_resubmission_final_v1/predictions_0228/*",
-    "runs/apjs_resubmission_final_v1/core_analysis_0228/**/*",
-    "runs/apjs_resubmission_final_v1/e7_typeii/*",
-    "runs/apjs_resubmission_final_v1/zl_sanity/*",
-    "runs/apjs_resubmission_final_v1/*_noisy_seed42/best.*",
-    "runs/apjs_resubmission_final_v1/*_noisy_seed42/config.json",
-    "runs/apjs_resubmission_final_v1/*_noisy_seed42/history.csv",
-    "runs/apjs_resubmission_final_v1/*_noisy_seed42/summary.json",
-    "runs/pretrained/deit_tiny_distilled_patch16_224-b40b3cf7.pth",
+    "README.md",
+    "README.zh-CN.md",
+    "requirements.txt",
+    "src/**/*.py",
+    "experiments/reproducibility/*.py",
+    "docs/*.md",
+    "experiments/reproducibility/manifests/**/*",
+    "results/predictions/*",
+    "results/core/**/*",
+    "results/transfer/*",
+    "results/diagnostics/type_ii/*",
+    "results/diagnostics/lens_redshift/*",
+    "results/benchmarks/**/*",
+    "results/preprocessing/*",
+    "results/training/**/*",
+    "artifacts/training/*_noisy_seed42/best.*",
+    "artifacts/training/*_noisy_seed42/config.json",
+    "artifacts/training/*_noisy_seed42/history.csv",
+    "artifacts/training/*_noisy_seed42/summary.json",
+    "artifacts/pretrained/deit_tiny_distilled_patch16_224-b40b3cf7.pth",
 ]
 
 def digest(path):
@@ -33,7 +42,8 @@ def digest(path):
 files = {}
 for pattern in PATTERNS:
     for path in ROOT.glob(pattern):
-        if path.is_file(): files[str(path.relative_to(ROOT))] = path
+        if path.is_file():
+            files[str(path.relative_to(ROOT))] = path
 rows = [{"path": name, "bytes": path.stat().st_size, "sha256": digest(path)} for name, path in sorted(files.items())]
 output = Path(__file__).with_name("MANIFEST.json")
 output.write_text(json.dumps({"files": rows, "file_count": len(rows), "total_bytes": sum(row["bytes"] for row in rows)}, indent=2))

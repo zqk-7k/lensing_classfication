@@ -1,0 +1,196 @@
+{
+  "status": "pass",
+  "scope": "data-only audit; no model inference or score inspection",
+  "catalog_interpretation": "independently generated IID holdout from the same simulation priors; not OOD",
+  "all_corresponding_file_hashes_different": true,
+  "files": {
+    "0222/SIS/strain_1": {
+      "path": "${GW_DATA_ROOT}/SIS_data_0222/SIS_data_strain_1.npy",
+      "sha256": "c786ac5b2e977613e5a5730ede4aabeb1ea2f37ffd45d25a9c21a250ca4672ab",
+      "bytes": 1966080128
+    },
+    "0222/SIS/strain_2": {
+      "path": "${GW_DATA_ROOT}/SIS_data_0222/SIS_data_strain_2.npy",
+      "sha256": "39bc60137ff37fe974ce8b84873a0f19c5d6c964ad4b8426568411f09fe2a9d7",
+      "bytes": 1966080128
+    },
+    "0222/SIS/snr_1": {
+      "path": "${GW_DATA_ROOT}/SIS_data_0222/SIS_optimal_SNR_1.npy",
+      "sha256": "d26031388de97d586e9a2f76c5b8d112a8530036245b3505fd37399d62fa0181",
+      "bytes": 20128
+    },
+    "0222/SIS/snr_2": {
+      "path": "${GW_DATA_ROOT}/SIS_data_0222/SIS_optimal_SNR_2.npy",
+      "sha256": "542d15bdea64c302491ca4ada279e17c4bc4cff01c7bd3da1818ae0933e4d0ce",
+      "bytes": 20128
+    },
+    "0222/SIS/source_parameters": {
+      "path": "${GW_DATA_ROOT}/SIS_data_0222/source_samples.csv",
+      "sha256": "98dafc0bf46994eb65859621a2c10428dcdc9975eaecbd0a3d8bc5ffa6f923a2",
+      "bytes": 702574
+    },
+    "0222/SIS/lens_parameters": {
+      "path": "${GW_DATA_ROOT}/SIS_data_0222/lens_params.csv",
+      "sha256": "ecdb606dc801072400848e8f32b186ed9e792e7838de27960aaff6851e7f0dc4",
+      "bytes": 342118
+    },
+    "0222/PM/strain_1": {
+      "path": "${GW_DATA_ROOT}/PM_data_0222/PM_data_strain_1.npy",
+      "sha256": "9dfc4658d6fd599989009b18035621561e0b5b03692b043c6fda71e808d17a4a",
+      "bytes": 1966080128
+    },
+    "0222/PM/strain_2": {
+      "path": "${GW_DATA_ROOT}/PM_data_0222/PM_data_strain_2.npy",
+      "sha256": "dc6480452b9f62498f3a52aa63d5dbab71b1b7d9dcbeef67d905b426d30fbd5a",
+      "bytes": 1966080128
+    },
+    "0222/PM/snr_1": {
+      "path": "${GW_DATA_ROOT}/PM_data_0222/PM_optimal_SNR_1.npy",
+      "sha256": "15058388c377dc8d4e4f9c3df84d3b10c805edcb288d49a99d6ce5054bd14841",
+      "bytes": 20128
+    },
+    "0222/PM/snr_2": {
+      "path": "${GW_DATA_ROOT}/PM_data_0222/PM_optimal_SNR_2.npy",
+      "sha256": "67fa6ce8523721b544d901f9e7b5b3870a973eeb37025e164835db514d15af00",
+      "bytes": 20128
+    },
+    "0222/PM/source_parameters": {
+      "path": "${GW_DATA_ROOT}/PM_data_0222/source_samples.csv",
+      "sha256": "a05fd473c15bdf9e44a4f563acc7faf070368eeb75618c26bfd08689640397d6",
+      "bytes": 702359
+    },
+    "0222/PM/lens_parameters": {
+      "path": "${GW_DATA_ROOT}/PM_data_0222/lens_params.csv",
+      "sha256": "a26801a670091a1d06252e181d2b9235d00cef23c42c35e76347abc564cdaf69",
+      "bytes": 347936
+    },
+    "0222/unlensed/strain": {
+      "path": "${GW_DATA_ROOT}/Unlensed_data_0222/unlensed_data_strain.npy",
+      "sha256": "e31011fab8f52e69264f57b5804ff1f37bf21827adccd6338c0c9fa97b0aee7c",
+      "bytes": 3932160128
+    },
+    "0222/unlensed/source_parameters": {
+      "path": "${GW_DATA_ROOT}/Unlensed_data_0222/source_samples.csv",
+      "sha256": "f33348b75bd5202a9f0226a70c69d93d980e375454af394e72650ea676aa6cd5",
+      "bytes": 1404540
+    },
+    "0228/SIS/strain_1": {
+      "path": "${GW_DATA_ROOT}/SIS_data_0228/SIS_data_strain_1.npy",
+      "sha256": "442bfc2e61c646dd1fa71167a80ef3676d0887cd3cbda2ae5836d82b90d88115",
+      "bytes": 1966080128
+    },
+    "0228/SIS/strain_2": {
+      "path": "${GW_DATA_ROOT}/SIS_data_0228/SIS_data_strain_2.npy",
+      "sha256": "0f23f321d3b01ed866b776b010966c0e39c5cc3483623b5bb641778d7d0a2791",
+      "bytes": 1966080128
+    },
+    "0228/SIS/snr_1": {
+      "path": "${GW_DATA_ROOT}/SIS_data_0228/SIS_optimal_SNR_1.npy",
+      "sha256": "1b14340f63a58e524449021b37785f884673509371d8b774246f53f6ae915d3f",
+      "bytes": 20128
+    },
+    "0228/SIS/snr_2": {
+      "path": "${GW_DATA_ROOT}/SIS_data_0228/SIS_optimal_SNR_2.npy",
+      "sha256": "ca7ed9d7209f7039eda649f48cbdef577c96e43c07310d524829b8361e0fe175",
+      "bytes": 20128
+    },
+    "0228/SIS/source_parameters": {
+      "path": "${GW_DATA_ROOT}/SIS_data_0228/source_samples.csv",
+      "sha256": "b028de176a8d20d88c2a7078ac3eebbe74b8ffde3f87fa9e702d7b11693408fb",
+      "bytes": 702264
+    },
+    "0228/SIS/lens_parameters": {
+      "path": "${GW_DATA_ROOT}/SIS_data_0228/lens_params.csv",
+      "sha256": "e54c7ae47df804c1f563f83a8419ad414abfbad7740c1370b067fd975dfe4333",
+      "bytes": 342207
+    },
+    "0228/PM/strain_1": {
+      "path": "${GW_DATA_ROOT}/PM_data_0228/PM_data_strain_1.npy",
+      "sha256": "2feb1d9686e3518f65256466cc4dea4abf8cbe721f85afc18d8f7ec543a46bd5",
+      "bytes": 1966080128
+    },
+    "0228/PM/strain_2": {
+      "path": "${GW_DATA_ROOT}/PM_data_0228/PM_data_strain_2.npy",
+      "sha256": "8abf66698f176e16d1bb6dbcbe808a001f6549eadc47b3c792420895ea5e44de",
+      "bytes": 1966080128
+    },
+    "0228/PM/snr_1": {
+      "path": "${GW_DATA_ROOT}/PM_data_0228/PM_optimal_SNR_1.npy",
+      "sha256": "f89637294caf6fe92d92b3f09e9ae3e711c07548bb7fe969aae6f001c9ece81b",
+      "bytes": 20128
+    },
+    "0228/PM/snr_2": {
+      "path": "${GW_DATA_ROOT}/PM_data_0228/PM_optimal_SNR_2.npy",
+      "sha256": "e8560a926b87091b677d7b66d22de5bb74afacd8c97d6addbcb644f8f3d8b959",
+      "bytes": 20128
+    },
+    "0228/PM/source_parameters": {
+      "path": "${GW_DATA_ROOT}/PM_data_0228/source_samples.csv",
+      "sha256": "c2f67832bac1f7d3df333f0dab74a9b7e2aa61170176e719c85025ef89bb54d8",
+      "bytes": 702662
+    },
+    "0228/PM/lens_parameters": {
+      "path": "${GW_DATA_ROOT}/PM_data_0228/lens_params.csv",
+      "sha256": "bd0e500ab1f3e8df5433fe198265017de2b3b49d31bf75099e10bcfe1e2f88ba",
+      "bytes": 348247
+    },
+    "0228/unlensed/strain": {
+      "path": "${GW_DATA_ROOT}/Unlensed_data_0228/unlensed_data_strain.npy",
+      "sha256": "2cea1d10e0eb5dfe9cb6b39bdfd4bd2626e0adc43e546fb3abd3d46a90cb1815",
+      "bytes": 3932160128
+    },
+    "0228/unlensed/source_parameters": {
+      "path": "${GW_DATA_ROOT}/Unlensed_data_0228/source_samples.csv",
+      "sha256": "f1fccb1de84bef3e6231ddb1b1fbf9ec8903cef86cc5216b0d251cf577572a18",
+      "bytes": 1404821
+    }
+  },
+  "source_parameter_overlap": {
+    "SIS": {
+      "0222_rows": 2500,
+      "0228_rows": 2500,
+      "exact_row_overlap": 0
+    },
+    "PM": {
+      "0222_rows": 2500,
+      "0228_rows": 2500,
+      "exact_row_overlap": 0
+    },
+    "unlensed": {
+      "0222_rows": 5000,
+      "0228_rows": 5000,
+      "exact_row_overlap": 0
+    }
+  },
+  "sampled_waveform_hash_checks": {
+    "SIS_1": {
+      "sampled_0222": 256,
+      "sampled_0228": 256,
+      "exact_hash_overlap": 0
+    },
+    "SIS_2": {
+      "sampled_0222": 256,
+      "sampled_0228": 256,
+      "exact_hash_overlap": 0
+    },
+    "PM_1": {
+      "sampled_0222": 256,
+      "sampled_0228": 256,
+      "exact_hash_overlap": 0
+    },
+    "PM_2": {
+      "sampled_0222": 256,
+      "sampled_0228": 256,
+      "exact_hash_overlap": 0
+    },
+    "unlensed": {
+      "sampled_0222": 256,
+      "sampled_0228": 256,
+      "exact_hash_overlap": 0
+    }
+  },
+  "generation_seed_metadata_files": [],
+  "seed_metadata_note": "Seed metadata unavailable in catalog directories",
+  "sample_seed": 20260711,
+  "sample_count_per_array": 256
+}

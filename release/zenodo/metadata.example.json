@@ -1,0 +1,26 @@
+{
+  "title": "Calibrated time-domain pair ranking for strongly lensed gravitational waves",
+  "upload_type": "software",
+  "description": "Code, frozen model checkpoints, source and pair manifests, per-pair prediction scores, and statistical artifacts for calibrated pair verification of strongly lensed gravitational waves.",
+  "creators": [
+    {
+      "name": "REQUIRED_AUTHOR_NAME",
+      "orcid": "REQUIRED_ORCID_IF_AVAILABLE",
+      "affiliation": "REQUIRED_AFFILIATION"
+    }
+  ],
+  "license": "REQUIRED_LICENSE",
+  "keywords": [
+    "gravitational-wave lensing",
+    "machine learning",
+    "pair verification",
+    "calibrated ranking statistic"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/zqk-7k/lensing_classfication",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}

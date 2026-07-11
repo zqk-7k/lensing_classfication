@@ -1,6 +1,0 @@
-{
-  "best_val_auc": 0.9650679999999999,
-  "runtime_seconds": 2285.8798298835754,
-  "checkpoint": "/root/autodl-tmp/wjx_project/classcify-gw-lensing-pairs-main/runs/apjs_resubmission_final_v1/cqt_deit_pm_noisy_seed42/best.pth",
-  "checkpoint_sha256": "82f3d394542d84be10e49392dbe86f20618e81cfe6bd16b045be290ea30da270"
-}

@@ -1,0 +1,36 @@
+{
+  "protocol_status": "frozen_before_0228_evaluation",
+  "training_catalog": "0222",
+  "held_out_catalog": "0228",
+  "git_commit": "4c168578d4e027a9a3b8d3482abd324bba13fdeb",
+  "shared_training_split_sha256": "f871af69d4aac09b9d05488b0370bbbfe001a73229df575b5b96cd97f8b37f52",
+  "selection_metric": "validation_auc",
+  "checkpoints": {
+    "pi_resnet_sis_noisy": {
+      "path": "artifacts/training/pi_resnet_sis_noisy_seed42/best.pt",
+      "sha256": "03caed7614bf971139804fc9beb1a2c89d48b936c1534ec706ce59ca2934deea",
+      "best_epoch": 275,
+      "validation_auc": 0.988624
+    },
+    "pi_resnet_pm_noisy": {
+      "path": "artifacts/training/pi_resnet_pm_noisy_seed42/best.pt",
+      "sha256": "ad892fb711568f4244ecfda7f8f93e9d511f9eb92b26a6974ca356a68a6d08c1",
+      "best_epoch": 184,
+      "validation_auc": 0.985332
+    },
+    "cqt_deit_sis_noisy": {
+      "path": "artifacts/training/cqt_deit_sis_noisy_seed42/best.pth",
+      "sha256": "5c3d775e2991a21ac3331f93986bde9b2e9fe1d6824311c8a312e5f82e847952",
+      "best_epoch": 52,
+      "validation_auc": 0.980088,
+      "pretrained_weights_sha256": "b40b3cf7d94a9cf8c7902e696de6aada1203d6eef58fe70c231f443426f845b3"
+    },
+    "cqt_deit_pm_noisy": {
+      "path": "artifacts/training/cqt_deit_pm_noisy_seed42/best.pth",
+      "sha256": "82f3d394542d84be10e49392dbe86f20618e81cfe6bd16b045be290ea30da270",
+      "best_epoch": 85,
+      "validation_auc": 0.965068,
+      "pretrained_weights_sha256": "b40b3cf7d94a9cf8c7902e696de6aada1203d6eef58fe70c231f443426f845b3"
+    }
+  }
+}

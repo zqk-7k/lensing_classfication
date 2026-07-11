@@ -1,1 +1,0 @@
-"""Siamese candidate-matching pipeline."""

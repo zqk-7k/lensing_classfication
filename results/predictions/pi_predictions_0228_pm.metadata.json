@@ -1,0 +1,13 @@
+{
+  "lens": "PM",
+  "rows": 202500,
+  "checkpoint": "artifacts/training/pi_resnet_pm_noisy_seed42/best.pt",
+  "checkpoint_sha256": "ad892fb711568f4244ecfda7f8f93e9d511f9eb92b26a6974ca356a68a6d08c1",
+  "manifest_sha256": {
+    "0228_pm_calibration_pairs.csv.gz": "c5c0f6141a123a565f47507740f5a7566949725b26fc1463fa201374ef28c54c",
+    "0228_pm_evaluation_pairs.csv.gz": "c65057f624ae59b435a576f79047b8372a18f05de153b9638e6af327b3c3adfb"
+  },
+  "prediction_path": "results/predictions/pi_predictions_0228_pm.csv.gz",
+  "prediction_sha256": "15bb6f749f9563259215a939f3d40a70ebbbf7745150b49cbdded51361fa9e64",
+  "score_inspected_during_inference": false
+}
