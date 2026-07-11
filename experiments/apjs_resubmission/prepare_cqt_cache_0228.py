@@ -102,8 +102,11 @@ def main():
     validation = validate(data_root)
     validation_path = output / "preprocessing_validation.json"
     validation_path.write_text(json.dumps(validation, indent=2), encoding="utf-8")
-    # Matplotlib/Pillow versions can differ by one quantization level; larger differences indicate protocol drift.
-    if any(not item["shape_equal"] or item["max_abs_pixel_difference"] > 1 for item in validation.values()):
+    # FFT/plotting-library revisions can move a tiny number of quantized RGB values by a few levels.
+    # Require near-exact reproduction while rejecting any material preprocessing drift.
+    if any(not item["shape_equal"] or item["max_abs_pixel_difference"] > 3
+           or item["mean_abs_pixel_difference"] > 0.002
+           or item["exact_pixel_fraction"] < 0.999 for item in validation.values()):
         raise RuntimeError(f"CQT preprocessing validation failed: {validation}")
 
     specs = []
