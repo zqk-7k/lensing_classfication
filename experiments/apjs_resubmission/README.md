@@ -7,4 +7,6 @@ Training uses only the 0222 catalogs. The 0228 catalogs are reserved for frozen 
 ```bash
 python experiments/apjs_resubmission/train_pi_resnet.py --lens SIS --device cuda:0
 python experiments/apjs_resubmission/train_pi_resnet.py --lens PM --device cuda:1
+python experiments/apjs_resubmission/train_semd.py --lens SIS --device cuda:2
+python experiments/apjs_resubmission/train_semd.py --lens PM --device cuda:3
 ```
