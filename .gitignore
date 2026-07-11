@@ -23,3 +23,6 @@ logs/
 *.npy
 *.npz
 *.xlsx
+
+# Locally built Zenodo deposition archives
+release/zenodo/dist/
