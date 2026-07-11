@@ -1,0 +1,15 @@
+{
+  "evaluation_lens": "PM",
+  "checkpoint_lens": "SIS",
+  "rows": 202500,
+  "checkpoint": "/root/autodl-tmp/wjx_project/classcify-gw-lensing-pairs-main/runs/apjs_resubmission_final_v1/cqt_deit_sis_noisy_seed42/best.pth",
+  "checkpoint_sha256": "5c3d775e2991a21ac3331f93986bde9b2e9fe1d6824311c8a312e5f82e847952",
+  "manifest_sha256": {
+    "0228_pm_calibration_pairs.csv.gz": "c5c0f6141a123a565f47507740f5a7566949725b26fc1463fa201374ef28c54c",
+    "0228_pm_evaluation_pairs.csv.gz": "c65057f624ae59b435a576f79047b8372a18f05de153b9638e6af327b3c3adfb"
+  },
+  "cache_metadata_sha256": "5cfeba0eaaf2f9f4a1e16416c42f9c2f6714a3f9ed2c8348903a277ee18fd371",
+  "prediction_path": "/root/autodl-tmp/wjx_project/classcify-gw-lensing-pairs-main/runs/apjs_resubmission_final_v1/predictions_0228/cqt_deit_predictions_0228_pm_checkpoint_sis.csv.gz",
+  "prediction_sha256": "07eb2fa0de3d4bf0e30e327eb48ce964c21787e7cb8ef7beabf6b8f74139d6b9",
+  "score_inspected_during_inference": false
+}

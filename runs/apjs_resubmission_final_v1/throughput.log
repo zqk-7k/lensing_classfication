@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "hardware": {
+    "gpu": "NVIDIA RTX 5000 Ada Generation",
+    "cpu_threads": 16
+  },
+  "pairs": 256,
+  "batch_size": 256,
+  "pi_resnet": {
+    "preprocess_ms_per_pair_serial": 0.514001731062308,
+    "preprocess_ms_per_pair_16_threads_wall": 0.819604450953193,
+    "gpu_inference_ms_per_pair": 0.7278919826785568,
+    "gpu_pairs_per_second": 1373.8302162913208
+  },
+  "cqt_deit": {
+    "preprocess_ms_per_pair_serial_including_cqt": 66.0380389817874,
+    "preprocess_ms_per_pair_16_threads_wall_including_cqt": 202.9028684628429,
+    "gpu_inference_ms_per_pair": 0.21764343480754178,
+    "gpu_pairs_per_second": 4594.671099931326
+  },
+  "note": "Preprocessing wall-time per pair is total wall time divided by N; the 16-thread figure reflects pipeline throughput, not single-pair latency."
+}
