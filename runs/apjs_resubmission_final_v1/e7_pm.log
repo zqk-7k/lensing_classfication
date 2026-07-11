@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "lens": "PM",
+  "sources": 250,
+  "checkpoint_sha256": "ad892fb711568f4244ecfda7f8f93e9d511f9eb92b26a6974ca356a68a6d08c1",
+  "manifest_sha256": "bbb9f2d99aa53e338548782cd32a25ac1fa7d33c3814161398d110d7ea13ee3b",
+  "fpp_1e3_threshold": 0.9999204273671976,
+  "mean_score_difference": -0.003842399441478429,
+  "mean_score_difference_ci": [
+    -0.028370838133343068,
+    0.021407191468625707
+  ],
+  "median_score_difference": 0.0,
+  "wilcoxon_statistic": 14976.0,
+  "wilcoxon_pvalue": 0.8477448466898028,
+  "physical_efficiency": 0.232,
+  "no_morse_efficiency": 0.244,
+  "efficiency_difference": -0.011999999999999983,
+  "efficiency_difference_ci": [
+    -0.06,
+    0.036000000000000004
+  ],
+  "max_hilbert_roundtrip_relative_l2": 0.0003176611789967865,
+  "score_file": "/root/autodl-tmp/wjx_project/classcify-gw-lensing-pairs-main/runs/apjs_resubmission_final_v1/e7_typeii/e7_scores_pm.csv.gz",
+  "score_file_sha256": "1b823a39bf20ce1e8e5084b9af00d2acd7eda16ce504a2c2d8622123d00e9c89",
+  "interpretation": "Paired model-sensitivity diagnostic; not a discovery of new lensing physics."
+}

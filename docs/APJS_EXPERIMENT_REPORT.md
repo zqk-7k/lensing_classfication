@@ -2,7 +2,7 @@
 
 ## Status
 
-The clean 0222 training protocol, independent 0228 calibration/evaluation protocol, four-model inference, core fixed-FPP analysis, selection functions, SNR/y reweighting, and lens-redshift sanity check are complete. The minimal E7 type-II diagnostic and final Zenodo deposition remain pending.
+The clean 0222 training protocol, independent 0228 calibration/evaluation protocol, four-model inference, core fixed-FPP analysis, selection functions, SNR/y reweighting, lens-redshift sanity check, and minimal E7 type-II diagnostic are complete. Final Zenodo deposition remains pending.
 
 ## Data roles
 
@@ -29,7 +29,11 @@ Scores and efficiencies depend strongly on weaker-image SNR. Efficiency decrease
 
 ## SNR/y matching
 
-The initial common-support reweighting reduces, but does not remove, the SIS-PM efficiency gap. For PI-ResNet the common-support gap changes from about 0.310 before weighting to 0.220 after weighting. This supports the statement that SNR explains a substantial fraction, not all, of the lens-family gap. Bootstrap uncertainty and weight diagnostics are generated separately before final wording is locked.
+Common-support reweighting reduces, but does not remove, the SIS-PM efficiency gap. For PI-ResNet the common-support gap changes from about 0.310 before weighting to 0.220 after weighting. The matched residual gap is 0.2201 with 95% CI [0.1922, 0.2489]. For CQT-DeiT it is 0.2294 [0.2064, 0.2520]. Effective sample sizes are 1527 for SIS and 1468 for PM, and maximum weights are below 4.6. SNR/y therefore explains a substantial fraction, not all, of the lens-family gap.
+
+## E7 controlled type-II diagnostic
+
+The pre-specified 500-source physical/no-Morse comparison is a null result. SIS has mean physical-minus-control score -0.0137 (CI -0.0456 to 0.0180; Wilcoxon p=0.453), while PM has -0.00384 (-0.0284 to 0.0214; p=0.848). Fixed-1e-3-threshold efficiency differences also include zero. The present network therefore shows no measurable sensitivity to the controlled intervention, and no higher-mode/inclination subdivision is pursued.
 
 ## Lens-redshift sanity check
 
@@ -37,7 +41,7 @@ Across 60 deterministic delay interventions, the maximum classifier-input differ
 
 ## Supported conclusion
 
-The evidence supports PI-ResNet as a calibrated time-domain pair-ranking statistic with materially higher efficiency than the CQT-DeiT baseline at the primary 1e-3 per-pair FPP. It does not support uniform superiority at 1e-4, real-noise robustness, catalog-level FAR claims, complete SNR explanation of the SIS-PM gap, or Morse-phase sensitivity before E7 is completed.
+The evidence supports PI-ResNet as a calibrated time-domain pair-ranking statistic with materially higher efficiency than the CQT-DeiT baseline at the primary 1e-3 per-pair FPP. It does not support uniform superiority at 1e-4, real-noise robustness, catalog-level FAR claims, complete SNR explanation of the SIS-PM gap, or measurable Morse-phase sensitivity in the minimal E7 probe.
 
 ## Reproducibility
 
