@@ -10,6 +10,7 @@ import json
 import os
 import platform
 import random
+import re
 import subprocess
 import sys
 import time
@@ -19,7 +20,6 @@ import numpy as np
 import torch
 import torch.nn as nn
 from sklearn.metrics import accuracy_score, roc_auc_score
-from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader
 
 
@@ -35,7 +35,8 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--lens", choices=["SIS", "PM"], required=True)
     parser.add_argument("--image-root", default="/root/autodl-tmp/qkzhang")
-    parser.add_argument("--output-root", default=str(ROOT / "runs" / "apjs_resubmission"))
+    parser.add_argument("--output-root", default=str(ROOT / "runs" / "apjs_resubmission_final_v1"))
+    parser.add_argument("--split-manifest", default=str(ROOT / "experiments" / "apjs_resubmission" / "manifests" / "split_0222_seed42.npz"))
     parser.add_argument("--epochs", type=int, default=300)
     parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--lr", type=float, default=5e-5)
@@ -45,7 +46,7 @@ def parse_args():
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument(
         "--pretrained-weights",
-        default=str(ROOT / "runs" / "apjs_resubmission" / "pretrained" /
+        default=str(ROOT / "runs" / "pretrained" /
                     "deit_tiny_distilled_patch16_224-b40b3cf7.pth"),
     )
     return parser.parse_args()
@@ -84,27 +85,62 @@ def evaluate(model, loader, criterion, device):
             roc_auc_score(labels_np, scores_np))
 
 
+def predict(model, loader, device):
+    model.eval()
+    labels_all, scores_all = [], []
+    with torch.no_grad():
+        for images, labels in loader:
+            logits = model(images.to(device, non_blocking=True))
+            labels_all.extend(labels.numpy())
+            scores_all.extend(torch.softmax(logits, dim=1)[:, 1].cpu().numpy())
+    return np.asarray(labels_all), np.asarray(scores_all)
+
+
+def source_id(path: Path) -> int:
+    match = re.search(r"(\d+)$", path.stem)
+    if not match:
+        raise ValueError(f"Cannot extract source ID from {path}")
+    return int(match.group(1))
+
+
 def main():
     args = parse_args()
     seed_everything(args.seed)
     image_root = Path(args.image_root) / f"dataset_images_{args.lens}_noisy_cqt"
-    paths, labels = [], []
+    records = []
     for label, folder in [(1, image_root / "lensed"), (0, image_root / "unlensed")]:
         if not folder.is_dir():
             raise FileNotFoundError(folder)
         files = sorted(p for p in folder.iterdir() if p.suffix.lower() in {".png", ".jpg", ".jpeg"})
-        paths.extend(map(str, files))
-        labels.extend([label] * len(files))
-    train_paths, val_paths, train_labels, val_labels = train_test_split(
-        paths, labels, test_size=0.2, random_state=args.seed, stratify=labels)
+        records.extend((str(path), label, source_id(path)) for path in files)
+    split_path = Path(args.split_manifest)
+    if not split_path.is_file():
+        raise FileNotFoundError(split_path)
+    shared = np.load(split_path, allow_pickle=False)
+    prefix = args.lens.lower()
+    train_ids = set(map(int, shared[f"{prefix}_train_source_ids"]))
+    val_ids = set(map(int, shared[f"{prefix}_val_source_ids"]))
+    assert train_ids.isdisjoint(val_ids)
+    unknown = sorted({record[2] for record in records} - train_ids - val_ids)
+    if unknown:
+        raise ValueError(f"Image source IDs absent from shared split: {unknown[:10]}")
+    train_records = [record for record in records if record[2] in train_ids]
+    val_records = [record for record in records if record[2] in val_ids]
+    train_paths = [record[0] for record in train_records]
+    train_labels = [record[1] for record in train_records]
+    val_paths = [record[0] for record in val_records]
+    val_labels = [record[1] for record in val_records]
+    assert {record[2] for record in train_records}.isdisjoint(record[2] for record in val_records)
 
-    run_dir = Path(args.output_root) / f"semd_{args.lens.lower()}_noisy_seed{args.seed}"
+    run_dir = Path(args.output_root) / f"cqt_deit_{args.lens.lower()}_noisy_seed{args.seed}"
     run_dir.mkdir(parents=True, exist_ok=True)
     with (run_dir / "split_manifest.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.writer(handle)
-        writer.writerow(["split", "label", "path"])
-        writer.writerows(("train", y, p) for p, y in zip(train_paths, train_labels))
-        writer.writerows(("val", y, p) for p, y in zip(val_paths, val_labels))
+        writer.writerow(["image_path", "label", "source_id", "split", "pair_type"])
+        writer.writerows((p, y, source, "train", "positive" if y else "negative")
+                         for p, y, source in train_records)
+        writer.writerows((p, y, source, "val", "positive" if y else "negative")
+                         for p, y, source in val_records)
 
     train_ds = LensedDataset(train_paths, train_labels, transform=get_train_transforms())
     val_ds = LensedDataset(val_paths, val_labels, transform=get_val_transforms())
@@ -140,6 +176,8 @@ def main():
         "selection_metric": "validation_auc", "implementation": "SEMD-inspired",
         "image_root_resolved": str(image_root),
         "pretrained_weights_sha256": sha256(pretrained_path),
+        "protocol_status": "final_v1_training", "shared_split_manifest": str(split_path),
+        "shared_split_manifest_sha256": sha256(split_path),
     }
     (run_dir / "config.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
 
@@ -178,6 +216,18 @@ def main():
                   f"val_loss={val_loss:.6f} val_acc={val_acc:.4f} val_auc={val_auc:.6f}", flush=True)
     summary = {"best_val_auc": float(best_auc), "runtime_seconds": time.time() - start,
                "checkpoint": str(checkpoint_path), "checkpoint_sha256": sha256(checkpoint_path)}
+    saved = torch.load(checkpoint_path, map_location=device, weights_only=False)
+    model.load_state_dict(saved["model_state_dict"])
+    train_eval_ds = LensedDataset(train_paths, train_labels, transform=get_val_transforms())
+    train_eval_loader = DataLoader(train_eval_ds, batch_size=args.batch_size, shuffle=False,
+                                   num_workers=args.workers, pin_memory=True)
+    train_pred_labels, train_scores = predict(model, train_eval_loader, device)
+    val_pred_labels, val_scores = predict(model, val_loader, device)
+    np.savez_compressed(run_dir / "train_predictions.npz", labels=train_pred_labels, scores=train_scores)
+    np.savez_compressed(run_dir / "val_predictions.npz", labels=val_pred_labels, scores=val_scores)
+    (run_dir / "checkpoint.sha256").write_text(summary["checkpoint_sha256"] + "\n", encoding="utf-8")
+    (run_dir / "git_commit.txt").write_text(metadata["git_commit"] + "\n", encoding="utf-8")
+    (run_dir / "environment.json").write_text(json.dumps({key: metadata[key] for key in ("python", "torch", "cuda")}, indent=2), encoding="utf-8")
     (run_dir / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
 

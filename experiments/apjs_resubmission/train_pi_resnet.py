@@ -35,7 +35,8 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--lens", choices=["SIS", "PM"], required=True)
     parser.add_argument("--data-root", default="/root/autodl-tmp/qkzhang")
-    parser.add_argument("--output-root", default=str(ROOT / "runs" / "apjs_resubmission"))
+    parser.add_argument("--output-root", default=str(ROOT / "runs" / "apjs_resubmission_final_v1"))
+    parser.add_argument("--split-manifest", default=str(ROOT / "experiments" / "apjs_resubmission" / "manifests" / "split_0222_seed42.npz"))
     parser.add_argument("--epochs", type=int, default=300)
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--lr", type=float, default=1e-4)
@@ -67,7 +68,21 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
-def evaluate(model, loader, criterion, device):
+class IndexedArrayView:
+    """Memory-efficient indexed view over a memmapped array."""
+
+    def __init__(self, array, indices):
+        self.array = array
+        self.indices = np.asarray(indices, dtype=np.int64)
+
+    def __len__(self):
+        return len(self.indices)
+
+    def __getitem__(self, item):
+        return self.array[self.indices[item]]
+
+
+def evaluate(model, loader, criterion, device, return_predictions=False):
     model.eval()
     losses, labels_all, scores_all = 0.0, [], []
     with torch.no_grad():
@@ -81,7 +96,8 @@ def evaluate(model, loader, criterion, device):
     labels_np = np.asarray(labels_all)
     scores_np = np.asarray(scores_all)
     preds = (scores_np >= 0.5).astype(np.int64)
-    return losses / len(loader.dataset), accuracy_score(labels_np, preds), roc_auc_score(labels_np, scores_np)
+    result = (losses / len(loader.dataset), accuracy_score(labels_np, preds), roc_auc_score(labels_np, scores_np))
+    return result + (labels_np, scores_np) if return_predictions else result
 
 
 def main() -> None:
@@ -114,13 +130,25 @@ def main() -> None:
     l1 = data_lib.load_npy_data(str(l1_path))
     l2 = data_lib.load_npy_data(str(l2_path))
     unl = data_lib.load_npy_data(str(unl_path))
-    indices = np.random.RandomState(args.seed).permutation(len(l1))
-    n_train = int(0.8 * len(indices))
-    train_idx, val_idx = indices[:n_train], indices[n_train:]
-    np.savez(run_dir / "split_manifest.npz", train_idx=train_idx, val_idx=val_idx)
+    split_path = Path(args.split_manifest)
+    if not split_path.is_file():
+        raise FileNotFoundError(split_path)
+    split = np.load(split_path, allow_pickle=False)
+    prefix = args.lens.lower()
+    train_idx = split[f"{prefix}_train_source_ids"]
+    val_idx = split[f"{prefix}_val_source_ids"]
+    unl_train_idx = split["unlensed_train_source_ids"]
+    unl_val_idx = split["unlensed_val_source_ids"]
+    assert set(train_idx).isdisjoint(val_idx)
+    assert set(unl_train_idx).isdisjoint(unl_val_idx)
+    unl_train = IndexedArrayView(unl, unl_train_idx)
+    unl_val = IndexedArrayView(unl, unl_val_idx)
+    np.savez_compressed(run_dir / "split_manifest.npz", train_source_ids=train_idx,
+                        val_source_ids=val_idx, unlensed_train_source_ids=unl_train_idx,
+                        unlensed_val_source_ids=unl_val_idx)
 
-    train_ds = data_lib.GWClassifierDataset(l1, l2, unl, train_idx, mode="train")
-    val_ds = data_lib.GWClassifierDataset(l1, l2, unl, val_idx, mode="val")
+    train_ds = data_lib.GWClassifierDataset(l1, l2, unl_train, train_idx, mode="train")
+    val_ds = data_lib.GWClassifierDataset(l1, l2, unl_val, val_idx, mode="val")
     train_gen = torch.Generator().manual_seed(args.seed)
     train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True,
                               num_workers=args.workers, pin_memory=True, generator=train_gen)
@@ -143,6 +171,8 @@ def main() -> None:
         "l1_path": str(l1_path), "l2_path": str(l2_path), "unl_path": str(unl_path),
         "selection_metric": "validation_auc", "use_snake": False,
         "use_se": True, "use_physics_fusion": True,
+        "protocol_status": "final_v1_training", "shared_split_manifest": str(split_path),
+        "shared_split_manifest_sha256": sha256(split_path),
     }
     (run_dir / "config.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
 
@@ -185,6 +215,18 @@ def main() -> None:
 
     summary = {"best_val_auc": float(best_auc), "runtime_seconds": time.time() - start,
                "checkpoint": str(checkpoint_path), "checkpoint_sha256": sha256(checkpoint_path)}
+    saved = torch.load(checkpoint_path, map_location=device, weights_only=False)
+    model.load_state_dict(saved["model_state_dict"])
+    _, _, _, val_labels, val_scores = evaluate(model, val_loader, criterion, device, True)
+    np.savez_compressed(run_dir / "val_predictions.npz", labels=val_labels, scores=val_scores)
+    deterministic_train_ds = data_lib.GWClassifierDataset(l1, l2, unl_train, train_idx, mode="val")
+    deterministic_train_loader = DataLoader(deterministic_train_ds, batch_size=args.batch_size,
+                                            shuffle=False, num_workers=args.workers, pin_memory=True)
+    _, _, _, train_labels, train_scores = evaluate(model, deterministic_train_loader, criterion, device, True)
+    np.savez_compressed(run_dir / "train_predictions.npz", labels=train_labels, scores=train_scores)
+    (run_dir / "checkpoint.sha256").write_text(summary["checkpoint_sha256"] + "\n", encoding="utf-8")
+    (run_dir / "git_commit.txt").write_text(metadata["git_commit"] + "\n", encoding="utf-8")
+    (run_dir / "environment.json").write_text(json.dumps({key: metadata[key] for key in ("python", "torch", "cuda")}, indent=2), encoding="utf-8")
     (run_dir / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
 
