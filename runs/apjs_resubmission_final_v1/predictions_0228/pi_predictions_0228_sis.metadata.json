@@ -1,0 +1,13 @@
+{
+  "lens": "SIS",
+  "rows": 202500,
+  "checkpoint": "/root/autodl-tmp/wjx_project/classcify-gw-lensing-pairs-main/runs/apjs_resubmission_final_v1/pi_resnet_sis_noisy_seed42/best.pt",
+  "checkpoint_sha256": "03caed7614bf971139804fc9beb1a2c89d48b936c1534ec706ce59ca2934deea",
+  "manifest_sha256": {
+    "0228_sis_calibration_pairs.csv.gz": "682a9bfd4024f372968bc63b1b911568ab999dd93fdea7250bb326ecf6284d5f",
+    "0228_sis_evaluation_pairs.csv.gz": "5ee897f3e1b0fb93377858ec8682b67670122b50a539f975bbc4eb16912f1869"
+  },
+  "prediction_path": "/root/autodl-tmp/wjx_project/classcify-gw-lensing-pairs-main/runs/apjs_resubmission_final_v1/predictions_0228/pi_predictions_0228_sis.csv.gz",
+  "prediction_sha256": "10dc60e1d3627dc51c8709f6232c4fbc1fd9d621e8a7608d2b92385f7f2bb9ce",
+  "score_inspected_during_inference": false
+}
