@@ -35,6 +35,18 @@ Common-support reweighting reduces, but does not remove, the SIS-PM efficiency g
 
 The pre-specified 500-source physical/no-Morse comparison is a null result. SIS has mean physical-minus-control score -0.0137 (CI -0.0456 to 0.0180; Wilcoxon p=0.453), while PM has -0.00384 (-0.0284 to 0.0214; p=0.848). Fixed-1e-3-threshold efficiency differences also include zero. The present network therefore shows no measurable sensitivity to the controlled intervention, and no higher-mode/inclination subdivision is pursued.
 
+## Cross-lens transfer
+
+Transfer is strongly asymmetric. On SIS evaluation pairs, the PM-trained checkpoint reduces efficiency at target FPP 1e-3 from 0.535 to 0.221 for PI-ResNet (change -0.315, CI -0.345 to -0.287) and from 0.377 to 0.170 for CQT-DeiT (-0.207, CI -0.223 to -0.191). On PM evaluation pairs, the SIS-trained checkpoint increases efficiency from 0.227 to 0.398 for PI-ResNet (+0.170, CI 0.155 to 0.187) and from 0.093 to 0.314 for CQT-DeiT (+0.221, CI 0.202 to 0.240). This does not support a symmetric robustness claim; it suggests that the SIS training distribution produces a more transferable low-FPP rule under the present priors.
+
+## Throughput
+
+On an NVIDIA RTX 5000 Ada Generation with batch size 256, PI-ResNet GPU inference takes 0.728 ms per pair and CQT-DeiT model inference takes 0.218 ms per pair. However, direct PI preprocessing costs only 0.514 ms per pair, whereas serial CQT construction costs 66.0 ms per pair. Approximate serial-stage end-to-end costs are therefore 1.24 ms per pair for PI-ResNet and 66.3 ms for CQT-DeiT, a roughly 53-fold advantage for the direct time-domain pipeline. A 16-thread CQT trial was slower because of library-level thread oversubscription and is not used as the headline figure.
+
+## Logit tail check
+
+Recalibration in pre-sigmoid/logit space selects exactly the same evaluation pairs as probability-space calibration at target FPP 1e-3 and 1e-4 for both models and both lens families (Jaccard 1.0). A monotonic logit transform therefore does not remove the SIS 1e-4 reversal. Probability saturation may be described as a display/numerical-conditioning limitation, but it is not an empirically established mechanism for the reversal in these stored predictions.
+
 ## Lens-redshift sanity check
 
 Across 60 deterministic delay interventions, the maximum classifier-input difference after peak realignment is 2.38e-7 and the maximum relative L2 difference is 2.14e-8. This establishes numerical invariance only within the present discrete peak-aligned verification setup at fixed source and y.

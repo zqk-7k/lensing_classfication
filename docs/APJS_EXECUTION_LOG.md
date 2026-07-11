@@ -31,6 +31,13 @@
 
 ## Pending
 
-- Freeze and generate the minimal E7 physical/no-Morse counterfactual dataset.
-- Add uncertainty and effective-sample-size diagnostics to SNR/y matching.
-- Finalize figures, result index, Zenodo bundle, and E7 report.
+- Finalize author metadata, software license, and Zenodo deposition/DOI.
+
+## Additional completion analyses
+
+- Completed SNR/y matched residual-gap bootstrap and weight/effective-sample-size diagnostics.
+- Completed the 500-source E7 probe and stopped higher-mode/inclination subdivision after the pre-specified null first-stage result.
+- Repeated cross-lens transfer in both directions for both architectures on the shared 0228 manifests with target-family calibration.
+- Benchmarked model and preprocessing throughput, explicitly including CQT construction cost.
+- Verified that logit-space calibration does not change the 1e-3 or 1e-4 selected pair sets.
+- Formally downgraded historical LIGO results; no contaminated historical table is permitted as independent-test evidence.

@@ -16,4 +16,9 @@
 | SNR/y matching | `snr_matched_sis_pm.csv` | `analyze_0228_core.py` |
 | Lens-redshift check | `runs/apjs_resubmission_final_v1/zl_sanity/` | `zl_invariance_sanity.py` |
 | E7 source contract | `experiments/apjs_resubmission/manifests/e7_typeii/` | `build_e7_manifest.py` |
+| E7 paired results | `runs/apjs_resubmission_final_v1/e7_typeii/` | `run_e7_typeii_probe.py` |
+| Cross-lens transfer | `runs/apjs_resubmission_final_v1/cross_lens_0228/` | `infer_*_0228.py`, `analyze_cross_lens_transfer.py` |
+| Throughput | `runs/apjs_resubmission_final_v1/throughput/throughput.json` | `benchmark_throughput.py` |
+| Logit tail check | `core_analysis_0228/logit_tail_check.json` | `analyze_logit_tail.py` |
+| LIGO scope decision | `docs/APJS_LIGO_DECISION.md` | protocol audit |
 | Artifact storage | `docs/APJS_ARTIFACT_STORAGE.md` | checkpoint/cache registries |

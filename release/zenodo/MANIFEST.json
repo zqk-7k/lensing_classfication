@@ -17,18 +17,23 @@
     },
     {
       "path": "docs/APJS_EXECUTION_LOG.md",
-      "bytes": 2070,
-      "sha256": "dea5e294ba6775600c86961207366e641408ac2b47d51e7e10cb0e65180eb93f"
+      "bytes": 2633,
+      "sha256": "d64f69370b7766c5f89fa8293d4499f466be84acfe4b04332034aa03a1f41d4f"
     },
     {
       "path": "docs/APJS_EXPERIMENT_REPORT.md",
-      "bytes": 4003,
-      "sha256": "d43312e73bec71af5fe6fb710bf7374d2044629c543f75c66876109c48d32d16"
+      "bytes": 5733,
+      "sha256": "3497bdfb8a3aa3fff523ddbfcde12bf429c3f59fdaf36a9a632431a217759256"
+    },
+    {
+      "path": "docs/APJS_LIGO_DECISION.md",
+      "bytes": 1284,
+      "sha256": "8e13dfcb23e212b1d290c8f5e91c4cf24491f52864ab61421170e0e836c863c7"
     },
     {
       "path": "docs/APJS_RESULT_INDEX.md",
-      "bytes": 1693,
-      "sha256": "a7efc3e3b91973d29f38f5b28e6a9c8444986fc58c7ed500face21b6a32172a1"
+      "bytes": 2190,
+      "sha256": "297dd8b210b3a03f9c59e4c20fe858bd45660b62bbb44cf864072a9be7a94dfb"
     },
     {
       "path": "experiments/apjs_resubmission/manifests/0222_0228_independence_audit.json",
@@ -154,6 +159,16 @@
       "path": "runs/apjs_resubmission_final_v1/core_analysis_0228/fixed_fpp_primary_table.csv",
       "bytes": 2337,
       "sha256": "6ab73eb6967ace35f0a1adad5983bd5e5424103f3f00f3fa4a5c14973a1a9195"
+    },
+    {
+      "path": "runs/apjs_resubmission_final_v1/core_analysis_0228/logit_tail_check.json",
+      "bytes": 3056,
+      "sha256": "ded95ee59fbf59e5c106322a4d6ce77d713bd863afdc8054abd06395ecfd1e8e"
+    },
+    {
+      "path": "runs/apjs_resubmission_final_v1/core_analysis_0228/logit_tail_check.sha256",
+      "bytes": 88,
+      "sha256": "949fa11e1470ccd59067d00e235bde3e20f89554eb3dcb0c4b15db1a884dd700"
     },
     {
       "path": "runs/apjs_resubmission_final_v1/core_analysis_0228/selection_functions_0228_pm.csv",
@@ -341,6 +356,16 @@
       "sha256": "9e30a81aa84815ee18aa95ed0e67d7eb8c5226fbef77ed603a4815efd0fd5963"
     },
     {
+      "path": "runs/apjs_resubmission_final_v1/predictions_0228/cqt_deit_predictions_0228_pm_checkpoint_sis.csv.gz",
+      "bytes": 3746178,
+      "sha256": "07eb2fa0de3d4bf0e30e327eb48ce964c21787e7cb8ef7beabf6b8f74139d6b9"
+    },
+    {
+      "path": "runs/apjs_resubmission_final_v1/predictions_0228/cqt_deit_predictions_0228_pm_checkpoint_sis.metadata.json",
+      "bytes": 971,
+      "sha256": "d89fcc44d392ee41fb568d42e15bea8722f6a7af835418d9e2fa4371e6053c09"
+    },
+    {
       "path": "runs/apjs_resubmission_final_v1/predictions_0228/cqt_deit_predictions_0228_sis.csv.gz",
       "bytes": 3725861,
       "sha256": "0dce8d7eedb2b9e279e299f3d456a644d4fa451a15f159245d4aadf5e8f3aba3"
@@ -349,6 +374,16 @@
       "path": "runs/apjs_resubmission_final_v1/predictions_0228/cqt_deit_predictions_0228_sis.metadata.json",
       "bytes": 921,
       "sha256": "87d62f071fb57f52d9bdfb7687ac7bfbe498480c50798055cebefefce3972b45"
+    },
+    {
+      "path": "runs/apjs_resubmission_final_v1/predictions_0228/cqt_deit_predictions_0228_sis_checkpoint_pm.csv.gz",
+      "bytes": 3614588,
+      "sha256": "2b901e96d84ff9969c4f8256ad8511b288595eb158578613310922ceb8e53ed0"
+    },
+    {
+      "path": "runs/apjs_resubmission_final_v1/predictions_0228/cqt_deit_predictions_0228_sis_checkpoint_pm.metadata.json",
+      "bytes": 972,
+      "sha256": "b1182226035c21ce340394abed25bba9588722cd18c46a7df22a4123204667e0"
     },
     {
       "path": "runs/apjs_resubmission_final_v1/predictions_0228/pi_predictions_0228_pm.csv.gz",
@@ -361,6 +396,16 @@
       "sha256": "3399fbfb11498cf64d13550bb059158112d919ada76bda1ca22562aa753b5879"
     },
     {
+      "path": "runs/apjs_resubmission_final_v1/predictions_0228/pi_predictions_0228_pm_checkpoint_sis.csv.gz",
+      "bytes": 3963023,
+      "sha256": "1ef12c74f78ab888b4d4cc60003ecb402d3587d4d9d7ced955cc7aba63fe5262"
+    },
+    {
+      "path": "runs/apjs_resubmission_final_v1/predictions_0228/pi_predictions_0228_pm_checkpoint_sis.metadata.json",
+      "bytes": 870,
+      "sha256": "38471a68b85d7ebe6fc8ec47538f049d9ad6afb43d7a5bcf8330f6c8e8477b14"
+    },
+    {
       "path": "runs/apjs_resubmission_final_v1/predictions_0228/pi_predictions_0228_sis.csv.gz",
       "bytes": 3975287,
       "sha256": "10dc60e1d3627dc51c8709f6232c4fbc1fd9d621e8a7608d2b92385f7f2bb9ce"
@@ -369,6 +414,16 @@
       "path": "runs/apjs_resubmission_final_v1/predictions_0228/pi_predictions_0228_sis.metadata.json",
       "bytes": 820,
       "sha256": "efca77443bbf401e18e99802877f32236a3ee6dd64705bd045e261e7632dfc5a"
+    },
+    {
+      "path": "runs/apjs_resubmission_final_v1/predictions_0228/pi_predictions_0228_sis_checkpoint_pm.csv.gz",
+      "bytes": 3979639,
+      "sha256": "5f887b91996a6575020695967cc7ba6016366e6f7fd048e1e4c5f7c5e33d5768"
+    },
+    {
+      "path": "runs/apjs_resubmission_final_v1/predictions_0228/pi_predictions_0228_sis_checkpoint_pm.metadata.json",
+      "bytes": 871,
+      "sha256": "328124ef7aa11f5a7009c8393b3edf224b863137f7b9870f71af8d2d6012bbf9"
     },
     {
       "path": "runs/apjs_resubmission_final_v1/zl_sanity/README.md",
@@ -391,6 +446,6 @@
       "sha256": "b40b3cf7d94a9cf8c7902e696de6aada1203d6eef58fe70c231f443426f845b3"
     }
   ],
-  "file_count": 78,
-  "total_bytes": 384711541
+  "file_count": 89,
+  "total_bytes": 400025871
 }
